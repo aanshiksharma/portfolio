@@ -44,11 +44,6 @@ function Footer() {
                   </svg>
                 </Link>
               </li>
-              {/* <li>
-                <Link to="https://leetcode.com/u/aanshik16/" target="blank">
-                  Leetcode
-                </Link>
-              </li> */}
             </ul>
           </div>
           <nav className="navbar">

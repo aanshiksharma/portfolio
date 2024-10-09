@@ -8,11 +8,11 @@ function Navbar() {
     <>
       <header>
         <div className="wrapper-1 flex">
-          <div className="logo">Logo</div>
+          <div className="logo">Aanshik Sharma</div>
           <nav className="navbar">
             <ul className="navlist flex">
               <li>
-                <Link to="/">Portfolio</Link>
+                <Link to="/" className="selected" >Portfolio</Link>
               </li>
               <li>
                 <Link to="/projects">Projects</Link>

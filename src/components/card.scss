@@ -1,0 +1,25 @@
+@import "../scss/colors";
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.5em;
+  min-width: 9rem;
+  max-width: 9rem;
+  border-radius: 1em;
+  background: $bg-blur-1;
+  box-shadow: 0 4px 9px 4px $shadow;
+  transition: 200ms ease;
+
+  &:hover{
+    transform: scale(1.02);
+  }
+
+  img{
+    max-width : 6rem;
+    aspect-ratio: 1;
+  }
+}

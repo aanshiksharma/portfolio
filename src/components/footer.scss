@@ -2,21 +2,27 @@
 
 footer{
     background: $bg-1;
-    color: $text-2;
+
     .wrapper-1{
         text-align: center;
+        padding: 1em;
 
         ul{
             list-style-type: none;
             gap: 1em;
             justify-content: center;
+            margin-block : 1em;
 
             a{
                 color: $text-2;
                 text-decoration: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 200ms ease;
 
                 &:hover{
-                    color: $text-1;
+                    color: $cta;
                 }
             }
         }
@@ -24,6 +30,10 @@ footer{
         .navlist{
             a{
                 font-size: 0.75rem;
+
+                &:hover{
+                    color: $text-1;
+                }
             }
         }
     }
