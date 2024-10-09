@@ -1,13 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 // Components
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
     <div>
       <Navbar />
+      <body>
+        <div className="wrapper-1">
+          Home
+        </div>
+      </body>
+      <Footer />
     </div>
   );
 }

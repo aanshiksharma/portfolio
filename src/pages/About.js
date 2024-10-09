@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+
+import Navbar from "../components/Navbar";
 
 function About() {
   return (
-    <div>About</div>
-  )
+    <>
+      <Navbar />
+      About
+    </>
+  );
 }
 
 export default About;

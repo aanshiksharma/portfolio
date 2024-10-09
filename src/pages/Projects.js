@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+
+import Navbar from "../components/Navbar";
 
 function Projects() {
   return (
-    <div>Projects</div>
-  )
+    <>
+      <Navbar />
+      Projects
+    </>
+  );
 }
 
 export default Projects;

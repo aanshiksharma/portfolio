@@ -1,5 +1,5 @@
-import { Router, Route, Routes } from "react-router-dom";
-import "./App.scss";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./scss/App.scss";
 
 // Pages
 import Home from './pages/Home';
