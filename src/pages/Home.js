@@ -8,15 +8,13 @@ import SkillsCarousel from "../components/SkillsCarousel";
 function Home() {
   return (
     <div>
-      <Navbar />
-      <body>
-        <section className="hero wrapper-1">
-          Hero Section
-        </section>
+      <Navbar select={"portfolio"} />
+      <main>
+        <section className="hero wrapper-1">Hero Section</section>
         <section className="about wrapper-1">About Me</section>
-          <SkillsCarousel />
+        <SkillsCarousel />
         <section className="projects wrapper-1">Projects</section>
-      </body>
+      </main>
       <Footer />
     </div>
   );

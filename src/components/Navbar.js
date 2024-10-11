@@ -1,9 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { useRef } from "react";
+
 import "./navbar.scss";
 
-function Navbar() {
+function Navbar({ select }) {
+  const link_1 = useRef();
+  const link_2 = useRef();
+  const link_3 = useRef();
+  const link_4 = useRef();
+
+  function selectionHandler(id, element) {
+    if (id === select) {
+      element.current.classList = "selected";
+    } else {
+      element.current.classList = "";
+    }
+  }
+
   return (
     <>
       <header>
@@ -17,18 +32,24 @@ function Navbar() {
           <nav className="navbar">
             <ul className="navlist flex">
               <li>
-                <Link to="/" className="selected">
+                <Link to="/" ref={link_1}>
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link to="/projects">Projects</Link>
+                <Link to="/projects" ref={link_2}>
+                  Projects
+                </Link>
               </li>
               <li>
-                <Link to="/about">About</Link>
+                <Link to="/about" ref={link_3}>
+                  About
+                </Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact" ref={link_4}>
+                  Contact
+                </Link>
               </li>
               <li>
                 <a

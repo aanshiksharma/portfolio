@@ -7,6 +7,18 @@ footer{
         text-align: center;
         padding: 1em;
 
+        .contact{
+            font-size: 0.75rem;
+
+            a{
+                color: $text-main;
+
+                &:hover{
+                    color: $cta;
+                }
+            }
+        }
+
         ul{
             list-style-type: none;
             gap: 1em;

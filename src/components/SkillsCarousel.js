@@ -2,7 +2,7 @@ import React from "react";
 
 import "./skillsCarousel.scss";
 
-import Card from "./Card";
+import Card from "./SkillCard";
 
 function SkillsCarousel() {
   return (

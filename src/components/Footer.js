@@ -11,14 +11,15 @@ function Footer() {
           <div className="credits">
             Website by - <span className="text-cta">Aanshik Sharma</span>
           </div>
+          
           <div className="social-media">
             <ul className="social-media-list flex">
               <li>
                 <Link to="https://github.com/aanshiksharma" target="blank">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="22"
+                    height="22"
                     fill="currentColor"
                     class="bi bi-github"
                     viewBox="0 0 16 16"
@@ -34,8 +35,8 @@ function Footer() {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="22"
+                    height="22"
                     fill="currentColor"
                     class="bi bi-linkedin"
                     viewBox="0 0 16 16"
@@ -46,6 +47,11 @@ function Footer() {
               </li>
             </ul>
           </div>
+
+          <div className="contact">
+            <a href="tel:+918533041415">+91 85330 41415</a> | <a href="mailto:aanshik16@gmail.com">aanshik16@gmail</a>
+          </div>
+
           <nav className="navbar">
             <ul className="navlist flex">
               <li>
