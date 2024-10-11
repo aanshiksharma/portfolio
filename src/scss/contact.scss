@@ -2,25 +2,34 @@
 
 .wrapper-1 {
   .contact-hero {
-    a {
-      text-decoration: none;
-      border: 1px solid $border-2;
-      padding: 0.5em 1em;
-      width: max-content;
-      border-radius: 4px;
-      background: $bg-2;
-      color: $text-1;
-      transition: 300ms ease;
+    min-height: 45vh;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
 
-      &:hover{
-        color: $cta;
-        border-color: $cta;
-        background: $bg-main;
+    .cta-buttons {
+      gap: 0.75em;
+
+      a {
+        text-decoration: none;
+        border: 1px solid $border-2;
+        padding: 0.5em 1em;
+        width: max-content;
+        border-radius: 4px;
+        background: $bg-2;
+        color: $text-1;
+        transition: 300ms ease;
+
+        &:hover {
+          color: $cta;
+          border-color: $cta;
+          background: $bg-main;
+        }
       }
-    }
 
-    span {
-      font-size: 0.75em;
+      span {
+        font-size: 0.75em;
+      }
     }
   }
 

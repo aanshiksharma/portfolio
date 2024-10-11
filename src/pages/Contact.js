@@ -11,11 +11,17 @@ function Contact() {
       <Navbar select={"contact"} />
       <main>
         <div className="wrapper-1">
-          <div className="contact-hero">
+          <div className="contact-hero flex">
             <h1>Contact Me!</h1>
-            <a href="tel:+918533041415">Call Me</a>
-            <span>Or</span>
-            <a href="mailto:aanshik16@gmail.com">Email Me</a>
+            <div className="cta-buttons flex">
+              <a href="tel:+918533041415">Call Me</a>
+              <span>Or</span>
+              <a href="mailto:aanshik16@gmail.com">Email Me</a>
+            </div>
+            <p>
+              Here are some of my professional platform accounts and my social
+              media profiles for you to check out.
+            </p>
           </div>
 
           <div className="cards">
@@ -242,6 +248,10 @@ function Contact() {
               </li>
             </ul>
           </div>
+
+          <form action="/" className="form">
+            {/* <p>Please fill out this form for any more queries.</p> */}
+          </form>
         </div>
       </main>
       <Footer />

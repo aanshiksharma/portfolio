@@ -4,21 +4,27 @@
   background: $bg-2;
 
   .wrapper-1 {
-    // overflow: hidden;
+    overflow: hidden;
     // overflow-x: scroll;
     padding-block: 1.5em;
 
     .carousel {
+      padding: 4em 1em;
       gap: 1.5em;
-    //   justify-content: center;
+      //   justify-content: center;
+      animation: slide 30s linear infinite;
     }
   }
 }
 
-
-// @keyframes carouselMovement {
-//     0%{
-//     }
-//     100%{
-//     }
-// }
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100%{
+    transform: translate3d(0, 0, 0);
+  }
+}

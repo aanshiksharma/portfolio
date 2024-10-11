@@ -1,0 +1,20 @@
+@import "./colors";
+
+.hero {
+  background: $bg-1;
+
+  .wrapper-1 {
+    min-height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+.about{
+    min-height: 100vh;
+}
+
+.projects{
+    min-height: 100vh;
+}

@@ -12,8 +12,10 @@
   background: $bg-blur-1;
   box-shadow: 0 4px 9px 4px $shadow;
   transition: 200ms ease;
+  border: 2px solid transparent;
 
   &:hover{
-    transform: scale(1.02);
+    background: $bg-2;
+    border-color: $border-1;
   }
 }
