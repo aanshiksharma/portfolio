@@ -1,0 +1,49 @@
+@import "../scss/colors";
+
+.container {
+  background: $bg-2;
+
+  .wrapper-1 {
+    overflow: hidden;
+    padding-block: 1.5em;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: calc(100% - 7em);
+      // background: #000;
+      z-index: 999;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to left, transparent, $bg-2);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to right, transparent, $bg-2);
+    }
+
+    .slide {
+      display: inline-flex;
+      padding: 2em 1em;
+      animation: slide 20s linear infinite;
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

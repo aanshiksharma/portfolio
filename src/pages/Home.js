@@ -5,7 +5,7 @@ import "../scss/home.scss";
 // Components
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import SkillsCarousel from "../components/SkillsCarousel";
+import SkillsSlide from "../components/SkillsSlide";
 
 function Home() {
   return (
@@ -19,7 +19,7 @@ function Home() {
           </div>
         </section>
         <section className="about wrapper-1">About Me</section>
-        <SkillsCarousel />
+        <SkillsSlide />
         <section className="projects wrapper-1">Projects</section>
       </main>
       <Footer />
