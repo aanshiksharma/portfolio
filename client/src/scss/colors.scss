@@ -1,0 +1,79 @@
+// Dark Mode
+// Background
+$dark-background-base: #05070a;
+$dark-background-surface: #0a0e13;
+$dark-background-soft: #0f141a;
+$dark-background-alt: #131920;
+$dark-background-hover: #1a2129;
+
+// Text
+$dark-text-primary: #cccccc;
+$dark-text-secondary: #aab3bd;
+$dark-text-muted: #9a9ea2;
+$dark-text-faint: #717982;
+$dark-text-disabled: #5a6169;
+
+// Accent
+$dark-accent-strong: #fe5e7b;
+$dark-accent-base: #ff6f8a;
+$dark-accent-hover: #e85772;
+$dark-accent-muted: #c6495e;
+$dark-accent-soft: #9a3a48;
+
+// Primary
+$dark-primary-base: #2b3d50;
+$dark-primary-hover: #364b61;
+$dark-primary-pressed: #1e2c3b;
+$dark-primary-muted: #42586e;
+$dark-primary-outline: #5d6d80;
+
+// Secondary
+$dark-secondary-base: #1d3349;
+$dark-secondary-hover: #27445f;
+$dark-secondary-pressed: #142434;
+$dark-secondary-muted: #335270;
+$dark-secondary-outline: #4a6784;
+
+// Light Mode
+// Background
+$light-background-base: #f5f7fa;
+$light-background-surface: #eaedf1;
+$light-background-soft: #dfe4ea;
+$light-background-alt: #d3dbe3;
+$light-background-hover: #c7d1db;
+
+// Text
+$light-text-primary: #2c353f;
+$light-text-secondary: #4d5965;
+$light-text-muted: #65727e;
+$light-text-faint: #7c8a96;
+$light-text-disabled: #97a3ae;
+
+// Accent
+$light-accent-strong: #a8001f;
+$light-accent-base: #c00023;
+$light-accent-hover: #7f0016;
+$light-accent-muted: #91051b;
+$light-accent-soft: #b4111c;
+
+// Primary
+$light-primary-base: #afc1d4;
+$light-primary-hover: #98b3c9;
+$light-primary-pressed: #7f99b1;
+$light-primary-muted: #6f889e;
+$light-primary-outline: #5e7286;
+
+// Secondary
+$light-secondary-base: #b6cce2;
+$light-secondary-hover: #d9d9d9;
+$light-secondary-pressed: #8aa3c0;
+$light-secondary-muted: #7c92ae;
+$light-secondary-outline: #6b7e99;
+
+// Gradient
+$pink-graident: linear-gradient(
+  95.34deg,
+  #ff5674 20.27%,
+  #ff2076 44.14%,
+  #ff1ba8 71.46%
+);
