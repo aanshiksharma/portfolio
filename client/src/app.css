@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --default-font-family: ubuntu, sans-serif;
+}
+
+:root {
+  --text-base: #060a0e;
+  --text-muted: #5f5f5f;
+  --text-inverse: #ffffff;
+
+  --text-primary: #14b8a6;
+  --text-secondary: #3b82f6;
+  --text-danger: #ef4444;
+  --text-success: #22c55e;
+
+  --bg-gradient: linear-gradient(
+    180deg,
+    #f7f7f7 23.33%,
+    #fafafa 61.67%,
+    #fcfcfc 100%
+  );
+
+  .dark {
+    --text-base: #f1f5f9;
+    --text-muted: #8c8c8c;
+    --text-inverse: #0f172a;
+
+    --text-primary: #d32421;
+    --text-secondary: #93c5fd;
+    --text-danger: #fca5a5;
+    --text-success: #86efac;
+
+    --bg-gradient: linear-gradient(
+      180deg,
+      #080808 23.33%,
+      #040404 61.67%,
+      #020202 100%
+    );
+  }
+}
+
+@layer utilities {
+  .text-base {
+    color: var(--text-base);
+  }
+  .text-muted {
+    color: var(--text-muted);
+  }
+  .text-inverse {
+    color: var(--text-inverse);
+  }
+
+  .text-primary {
+    color: var(--text-primary);
+  }
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+  .text-danger {
+    color: var(--text-danger);
+  }
+  .text-success {
+    color: var(--text-success);
+  }
+
+  .hover-text-base:hover {
+    color: var(--text-base);
+  }
+
+  .bg-gradient-custom {
+    background: var(--bg-gradient);
+  }
+}
