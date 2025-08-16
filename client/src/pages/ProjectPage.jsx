@@ -4,7 +4,12 @@ function ProjectPage({ projectName }) {
   return (
     <>
       <Navbar />
-      <h1>Page dedicated for the project : {projectName}</h1>;
+
+      <main>
+        <section>
+          <h1>Page dedicated for the project : {projectName}</h1>;
+        </section>
+      </main>
     </>
   );
 }

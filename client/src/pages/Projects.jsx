@@ -4,7 +4,10 @@ function Projects() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto">Projects</div>
+
+      <main>
+        <section className="">Projects</section>
+      </main>
     </>
   );
 }

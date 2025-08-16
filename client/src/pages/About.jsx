@@ -4,7 +4,10 @@ function About() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto">About</div>
+
+      <main>
+        <section className="">About</section>
+      </main>
     </>
   );
 }

@@ -1,74 +1,51 @@
 @import "tailwindcss";
 
 @theme {
-  --default-font-family: ubuntu, sans-serif;
+  --default-font-family: system-ui, Inter, ubuntu, sans-serif;
+
+  --color-text-base: #f1f5f9;
+  --color-text-muted: #8c8c8c;
+  --color-text-inverse: #0e0a06;
+
+  --color-primary: var(--color-indigo-800);
+  --color-secondary: #93c5fd;
+  --color-accent: #93c5fd;
+  --color-danger: var(--color-red-500);
+  --color-success: #86efac;
+
+  /* --color-bg-base: #020202; */
+  --color-bg-base: var(--color-zinc-950);
+  --color-bg-base-alt: var(--color-zinc-900);
+  --color-bg-base-light: var(--color-neutral-200);
 }
 
 :root {
-  --text-base: #060a0e;
-  --text-muted: #5f5f5f;
-  --text-inverse: #ffffff;
-
-  --text-primary: #14b8a6;
-  --text-secondary: #3b82f6;
-  --text-danger: #ef4444;
-  --text-success: #22c55e;
-
+  /* --bg-gradient: linear-gradient(
+    180deg,
+    #080808 23.33%,
+    #040404 61.67%,
+    #020202 100%
+  ); */
   --bg-gradient: linear-gradient(
     180deg,
-    #f7f7f7 23.33%,
-    #fafafa 61.67%,
-    #fcfcfc 100%
+    #080808 23.33%,
+    #040404 61.67%,
+    var(--color-zinc-950) 100%
   );
-
-  .dark {
-    --text-base: #f1f5f9;
-    --text-muted: #8c8c8c;
-    --text-inverse: #0f172a;
-
-    --text-primary: #d32421;
-    --text-secondary: #93c5fd;
-    --text-danger: #fca5a5;
-    --text-success: #86efac;
-
-    --bg-gradient: linear-gradient(
-      180deg,
-      #080808 23.33%,
-      #040404 61.67%,
-      #020202 100%
-    );
-  }
 }
 
 @layer utilities {
-  .text-base {
-    color: var(--text-base);
-  }
-  .text-muted {
-    color: var(--text-muted);
-  }
-  .text-inverse {
-    color: var(--text-inverse);
-  }
-
-  .text-primary {
-    color: var(--text-primary);
-  }
-  .text-secondary {
-    color: var(--text-secondary);
-  }
-  .text-danger {
-    color: var(--text-danger);
-  }
-  .text-success {
-    color: var(--text-success);
-  }
-
-  .hover-text-base:hover {
-    color: var(--text-base);
-  }
-
   .bg-gradient-custom {
     background: var(--bg-gradient);
+  }
+}
+
+@layer components {
+  main {
+    @apply text-text-base bg-bg-base;
+  }
+
+  main > section {
+    @apply min-h-screen flex flex-col items-center justify-center;
   }
 }

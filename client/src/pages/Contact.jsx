@@ -4,7 +4,10 @@ function Contact() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto">Contact</div>
+
+      <main>
+        <section className="">Contact</section>
+      </main>
     </>
   );
 }
