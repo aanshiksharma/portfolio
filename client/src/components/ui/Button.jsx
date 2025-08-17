@@ -1,6 +1,30 @@
+import {
+  Download,
+  Envelope,
+  ExclamationCircle,
+  Github,
+  Linkedin,
+} from "react-bootstrap-icons";
+
+export const Icon = ({ icon, iconSize }) => {
+  switch (icon) {
+    case "download":
+      return <Download size={iconSize} />;
+    case "mail":
+      return <Envelope size={iconSize} />;
+    case "linkedin":
+      return <Linkedin size={iconSize} />;
+    case "github":
+      return <Github size={iconSize} />;
+    default:
+      return <ExclamationCircle size={iconSize} />;
+  }
+};
+
 function Button({
   label,
   icon,
+  iconSize,
   onClick,
   href,
   download,
@@ -8,7 +32,7 @@ function Button({
   className = "",
 }) {
   const baseClass =
-    "rounded-sm px-2 py-1 cursor-pointer transition duration-300 ease-out";
+    "rounded-sm px-2 py-1 flex items-center justify-center gap-2 cursor-pointer transition duration-300 ease-out";
 
   if (href)
     return (
@@ -17,7 +41,8 @@ function Button({
         download={download}
         className={`${baseClass} ${className}`}
       >
-        {label}
+        {icon && <Icon icon={icon} iconSize={iconSize} />}
+        <p>{label}</p>
       </a>
     );
   else {
@@ -27,12 +52,11 @@ function Button({
         onClick={onClick}
         className={`${baseClass} ${className}`}
       >
-        {label}
+        {icon && <Icon icon={icon} iconSize={iconSize} />}
+        <p>{label}</p>
       </button>
     );
   }
-
-  return;
 }
 
 export default Button;
