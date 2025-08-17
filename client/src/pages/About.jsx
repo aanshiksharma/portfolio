@@ -1,11 +1,11 @@
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "../components/Navbar";
 
 function About() {
   return (
     <>
       <Navbar />
 
-      <main>
+      <main className="">
         <section className="">About</section>
       </main>
     </>
