@@ -159,7 +159,7 @@ function Terminal() {
       <div
         ref={terminalRef}
         className={`w-screen h-screen overflow-x-hidden font-mono p-3 leading-5 bg-neutral-950 text-gray-200 ${
-          spacingCommands.includes(lastCommand.current)
+          spacingCommands.includes(lastCommand.current.toLowerCase())
             ? "space-y-0"
             : "space-y-5"
         }`}
