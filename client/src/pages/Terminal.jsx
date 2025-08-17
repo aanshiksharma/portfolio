@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { v4 as uuidv4 } from "uuid";
+import gsap from "gsap";
 
 function Terminal() {
   const [dir, setDir] = useState("terminal");
@@ -12,8 +13,11 @@ function Terminal() {
         "Hello, welcome to my interactive web terminal!",
         "For a list of available commands, type 'help'.",
       ],
+      command: "intro",
     },
   ]);
+
+  gsap.registerPlugin(SplitText);
 
   const terminalRef = useRef(null);
   const lastCommand = useRef("");
@@ -27,18 +31,33 @@ function Terminal() {
       terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
   }, [outputs]);
 
+  useEffect(() => {
+    // split all elements with the class "split" into words and characters
+    let split = SplitText.create("#output-container .latest-output p", {
+      type: "chars",
+    });
+
+    // now animate the characters in a staggered fashion
+    gsap.from(split.chars, {
+      autoAlpha: 0, // fade in from opacity: 0 and visibility: hidden
+      duration: 0.01,
+      stagger: 0.0025,
+    });
+  }, [outputs]);
+
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
   const commandsList = [
     { command: "help", desc: "See a list of all available commands." },
+    { command: "intro", desc: "See the intro text on the console." },
     { command: "projects", desc: "See a list of all projects." },
     { command: "exit", desc: "Go back to the home page." },
     { command: "admin", desc: "Get to know the admin." },
     {
       command: "calc(expression)",
-      desc: "Calculates an expression. Throws an error for invalid expression.",
+      desc: "Calculate an expression.",
     },
     { command: "clear or cls", desc: "Clears the terminal." },
   ];
@@ -50,47 +69,66 @@ function Terminal() {
         PROMPT + inputValue,
         ...commandsList.map((com) => `${com.command} : ${com.desc}`),
       ];
-      pushOutput(body);
+      pushOutput(body, inputValue);
+    },
+
+    intro: () => {
+      pushOutput(
+        [
+          PROMPT + inputValue,
+          "Hello, welcome to my interactive web terminal!",
+          "For a list of available commands, type 'help'.",
+        ],
+        inputValue
+      );
+      setInputValue("");
     },
 
     projects: () => {
-      pushOutput([PROMPT + inputValue, "Projects command output here"]);
+      pushOutput(
+        [PROMPT + inputValue, "Projects command output here"],
+        inputValue
+      );
+    },
+
+    admin: () => {
+      pushOutput([PROMPT + inputValue, "Admin info here"], inputValue);
     },
 
     exit: () => {
-      pushOutput([PROMPT + inputValue, "Exiting and redirecting..."]);
+      pushOutput(
+        [PROMPT + inputValue, "Exiting and redirecting..."],
+        inputValue
+      );
       setInputValue("");
       setTimeout(() => {
         navigate("/");
       }, 370);
     },
 
-    admin: () => {
-      pushOutput([PROMPT + inputValue, "Admin info here"]);
-    },
-
     clear: () => {
-      setOutputs([]);
+      setOutputs([], inputValue);
       setInputValue("");
     },
 
     cls: () => {
-      setOutputs([]);
+      setOutputs([], inputValue);
       setInputValue("");
     },
 
     "": () => {
-      pushOutput([PROMPT]);
+      pushOutput([PROMPT], inputValue);
       setInputValue("");
     },
   };
 
-  const pushOutput = (lines) => {
-    if (outputs.length === 0) setOutputs([{ id: uuidv4(), body: lines }]);
+  const pushOutput = (lines, command) => {
+    if (outputs.length === 0)
+      setOutputs([{ id: uuidv4(), body: lines, command: command }]);
     else {
-      const newOutputs = setOutputs((prev) => [
+      setOutputs((prev) => [
         ...prev,
-        { id: uuidv4(), body: lines },
+        { id: uuidv4(), body: lines, command: command },
       ]);
     }
     setInputValue("");
@@ -103,11 +141,14 @@ function Terminal() {
     if (commandHandlers[command]) {
       commandHandlers[command]();
     } else {
-      pushOutput([
-        PROMPT + inputValue,
-        `'${inputValue}' is not recognized as a command.`,
-        "For a list of available commands, type 'help'.",
-      ]);
+      pushOutput(
+        [
+          PROMPT + inputValue,
+          `'${inputValue.split(" ")[0]}' is not recognized as a command.`,
+          "For a list of available commands, type 'help'.",
+        ],
+        command
+      );
     }
   };
 
@@ -117,17 +158,22 @@ function Terminal() {
     <>
       <div
         ref={terminalRef}
-        className={`w-screen h-screen overflow-hidden font-mono p-2 leading-5 bg-neutral-950 text-gray-200 ${
+        className={`w-screen h-screen overflow-x-hidden font-mono p-3 leading-5 bg-neutral-950 text-gray-200 ${
           spacingCommands.includes(lastCommand.current)
             ? "space-y-0"
             : "space-y-5"
         }`}
       >
-        <div id="output-area">
-          {outputs.map((output) => (
-            <div key={output.id} className="mb-5">
-              {output.body.map((text, index) => (
-                <p key={output.id + index}>{text}</p>
+        <div id="output-container">
+          {outputs.map(({ id, body, command }, index) => (
+            <div
+              key={id}
+              className={`${spacingCommands.includes(command) ? "" : "mb-5"} ${
+                index === outputs.length - 1 && "latest-output"
+              }`}
+            >
+              {body.map((text, index) => (
+                <p key={id + index}>{text}</p>
               ))}
             </div>
           ))}
