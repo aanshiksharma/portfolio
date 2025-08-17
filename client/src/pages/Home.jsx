@@ -50,17 +50,23 @@ function Home() {
               </div>
             </div>
 
-            <p>
-              I am a Full Stack Web Developer (front-end focused) specializing
-              in building scalable, feature-rich applications with strong
-              attention to detail.
-            </p>
+            <div className="space-y-4">
+              <p>
+                I am a{" "}
+                <span className="text-text-base">Full Stack Web Developer</span>{" "}
+                (front-end focused) specializing in building scalable,
+                feature-rich applications with strong attention to detail.
+              </p>
 
-            <p>
-              My work incorporates technologies like the MERN Stack, Tailwind
-              CSS, Redux ToolKit, GSAP, Sass, and Bootstrap to deliver efficient
-              workflows and seamless user-experiences.
-            </p>
+              <p>
+                My work incorporates technologies like the{" "}
+                <span className="text-text-base">
+                  MERN Stack, TailwindCSS, Redux Toolkit, GSAP, Sass
+                </span>{" "}
+                and <span className="text-text-base">Bootstrap</span>, to
+                deliver efficient workflows and seamless user-experiences.
+              </p>
+            </div>
 
             <Button
               href="/resume.pdf"

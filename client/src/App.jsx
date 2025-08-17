@@ -17,11 +17,11 @@ import Terminal from "./pages/Terminal";
 
 function App() {
   document.getElementById("root").addEventListener("mousemove", (dets) => {
-    // gsap.to("#custom-cursor", {
-    //   x: dets.x - 6,
-    //   y: dets.y - 6,
-    //   duration: 0.5,
-    // });
+    gsap.to("#custom-cursor", {
+      x: dets.x - 6,
+      y: dets.y - 6,
+      duration: 0.5,
+    });
   });
 
   return (
