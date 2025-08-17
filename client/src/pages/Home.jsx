@@ -1,41 +1,80 @@
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Button from "../components/ui/Button";
+import { Icon } from "../components/ui/Button";
 
 function Home() {
   return (
     <>
       <Navbar />
       <main>
-        <section id="hero-section" className="bg-gradient-custom max-h-195">
-          <div className="flex-1 flex flex-col justify-center items-center text-center gap-6">
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <h3 className="text-xl leading-9 font-semibold">
-                  Hey, I'm{" "}
-                  <span className="text-primary text-2xl font-bold">
-                    Aanshik
-                  </span>
-                </h3>
-                <h1 className="text-5xl leading-16 font-bold">
-                  Web Developer and Programmer
-                </h1>
+        <section id="hero-section" className="relative bg-gradient-custom">
+          <div className="container mx-auto mt-12 px-8 py-12 space-y-8">
+            <div className="profile-tag flex items-center justify-between">
+              <div className="left flex items-center gap-4">
+                <div className="w-20 h-20 rounded-full overflow-hidden">
+                  <img src="/adminImage.jpg" alt="" className="w-full h-full" />
+                </div>
+
+                <div className="profile-text space-y-1">
+                  <h1 className="text-2xl text-text-base font-semibold leading-9">
+                    Hi, I'm Aanshik
+                  </h1>
+                  <p className="text-sm leading-6">
+                    Web Developer | B.Tech Student at JSSATE, Noida
+                  </p>
+                </div>
               </div>
-              <div className="text-text-muted leading-7">
-                <p>If you can imagine it, I can build it!</p>
-                <p>Let's code your imagination into reality.</p>
+
+              <div className="right flex items-center gap-4">
+                <a
+                  href="mailto:aanshik16@gmail.com"
+                  className="hover:text-text-base transition-colors duration-300 ease-out"
+                >
+                  <Icon icon="mail" iconSize={24} />
+                </a>
+
+                <a
+                  href="https://linkedin.com/in/aanshik-sharma"
+                  className="hover:text-linkedin-blue transition-colors duration-300 ease-out"
+                >
+                  <Icon icon="linkedin" iconSize={24} />
+                </a>
+
+                <a
+                  href="https://github.com/aanshiksharma"
+                  className="hover:text-text-base transition-colors duration-300 ease-out"
+                >
+                  <Icon icon="github" iconSize={24} />
+                </a>
               </div>
             </div>
 
+            <p>
+              I am a Full Stack Web Developer (front-end focused) specializing
+              in building scalable, feature-rich applications with strong
+              attention to detail.
+            </p>
+
+            <p>
+              My work incorporates technologies like the MERN Stack, Tailwind
+              CSS, Redux ToolKit, GSAP, Sass, and Bootstrap to deliver efficient
+              workflows and seamless user-experiences.
+            </p>
+
             <Button
-              label="Download Resume"
-              className="pt-2 pb-2.5 px-6 leading-5 flex items-center justify-center bg-primary hover:bg-transparent border-2 border-primary hover:text-primary "
+              href="/resume.pdf"
+              icon="download"
+              label="Resume"
+              download="AanshikSharmaResume.pdf"
+              className="py-2 px-6 w-fit leading-5 border-2
+              border-text-muted hover:border-text-base hover:text-text-base"
             />
           </div>
         </section>
 
-        <section id="about-section" className="">
-          About
+        <section id="skills-section" className="">
+          Skills
         </section>
 
         <section

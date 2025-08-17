@@ -1,51 +1,77 @@
 @import "tailwindcss";
 
 @theme {
-  --default-font-family: system-ui, Inter, ubuntu, sans-serif;
+  --default-font-family: Inter, ubuntu, sans-serif;
 
   --color-text-base: #f1f5f9;
   --color-text-muted: #8c8c8c;
-  --color-text-inverse: #0e0a06;
+  --color-text-inverse: #060a0e;
 
-  --color-primary: var(--color-indigo-800);
-  --color-secondary: #93c5fd;
-  --color-accent: #93c5fd;
+  --color-primary: var(--color-indigo-600);
+  --color-secondary: var(--color-purple-950);
+  --color-accent: var(--color-purple-800);
   --color-danger: var(--color-red-500);
   --color-success: #86efac;
 
-  /* --color-bg-base: #020202; */
+  --color-linkedin-blue: rgb(10, 102, 194);
+
   --color-bg-base: var(--color-zinc-950);
   --color-bg-base-alt: var(--color-zinc-900);
   --color-bg-base-light: var(--color-neutral-200);
 }
 
 :root {
-  /* --bg-gradient: linear-gradient(
-    180deg,
-    #080808 23.33%,
-    #040404 61.67%,
-    #020202 100%
-  ); */
   --bg-gradient: linear-gradient(
     180deg,
-    #080808 23.33%,
-    #040404 61.67%,
+    #0c0c0c 23.33%,
+    var(--color-neutral-950) 61.67%,
     var(--color-zinc-950) 100%
   );
+
+  --text-gradient: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-accent)
+  );
+
+  --color-linkedin-blue: oklch(51.56% 0.16327 254.746);
+  --color-linkedin-tailwind: var(--color-cyan-700);
 }
 
 @layer utilities {
   .bg-gradient-custom {
     background: var(--bg-gradient);
   }
+
+  .text-gradient-custom {
+    background: var(--text-gradient);
+    background-clip: text;
+    color: transparent;
+  }
+
+  .container {
+    @apply max-w-4xl;
+  }
 }
 
 @layer components {
   main {
-    @apply text-text-base bg-bg-base;
+    @apply text-text-muted bg-bg-base;
   }
 
   main > section {
-    @apply min-h-screen flex flex-col items-center justify-center;
+    @apply flex flex-col items-center justify-center;
+
+    &:not(#hero-section) {
+      @apply min-h-screen;
+    }
   }
+
+  nav > .active {
+    @apply text-text-base;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
