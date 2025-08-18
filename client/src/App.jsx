@@ -18,8 +18,8 @@ import Terminal from "./pages/Terminal";
 function App() {
   document.getElementById("root").addEventListener("mousemove", (dets) => {
     gsap.to("#custom-cursor", {
-      x: dets.x - 6,
-      y: dets.y - 6,
+      x: dets.x - 12,
+      y: dets.y - 12,
       duration: 0.5,
     });
   });
@@ -28,9 +28,9 @@ function App() {
     <>
       <div
         id="custom-cursor"
-        className="w-3 h-3 rounded-full
-        fixed top-0 left-0 z-1
-        bg-text-base
+        className="w-6 h-6 rounded-full
+        fixed top-0 left-0 z-10
+        bg-accent blur-sm
         "
       ></div>
 

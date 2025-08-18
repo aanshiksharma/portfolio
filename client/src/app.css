@@ -56,11 +56,15 @@
 
 @layer components {
   main {
-    @apply text-text-muted bg-bg-base;
+    @apply text-text-muted bg-bg-base -z-20;
   }
 
   main > section {
     @apply flex flex-col items-center justify-center;
+
+    & > .container {
+      @apply z-20;
+    }
 
     &:not(#hero-section) {
       @apply min-h-screen;
