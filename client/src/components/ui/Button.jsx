@@ -4,6 +4,8 @@ import {
   ExclamationCircle,
   Github,
   Linkedin,
+  Link45deg,
+  FileEarmarkArrowDown,
 } from "react-bootstrap-icons";
 
 export const Icon = ({ icon, iconSize }) => {
@@ -16,6 +18,10 @@ export const Icon = ({ icon, iconSize }) => {
       return <Linkedin size={iconSize} />;
     case "github":
       return <Github size={iconSize} />;
+    case "link45deg":
+      return <Link45deg size={iconSize} />;
+    case "fileearmarkarrowdown":
+      return <FileEarmarkArrowDown size={iconSize} />;
     default:
       return <ExclamationCircle size={iconSize} />;
   }

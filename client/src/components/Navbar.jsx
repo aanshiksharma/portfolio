@@ -13,8 +13,8 @@ function Navbar() {
 
   return (
     <>
-      <header className="bg-bg-base/20 backdrop-blur-lg border-b-1 border-white/10 fixed z-20 top-0 left-0 right-0">
-        <div className="container mx-auto px-4 py-2 flex items-center justify-between text-text-muted">
+      <header className="bg-bg-base/20 backdrop-blur-lg border-b-1 border-white/10 fixed z-40 top-0 left-0 right-0">
+        <div className="container max-w-5xl mx-auto px-4 py-2 flex items-center justify-between text-text-muted">
           <div className="title text-text-base">
             <NavLink to="/">{"<Aanshik />"}</NavLink>
           </div>

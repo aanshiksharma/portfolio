@@ -6,6 +6,7 @@
   --color-text-base: #f1f5f9;
   --color-text-muted: #8c8c8c;
   --color-text-inverse: #060a0e;
+  --color-text-inverse-muted: #5f5f5f;
 
   --color-primary: var(--color-indigo-600);
   --color-secondary: var(--color-purple-950);
@@ -16,8 +17,10 @@
   --color-linkedin-blue: rgb(10, 102, 194);
 
   --color-bg-base: var(--color-zinc-950);
-  --color-bg-base-alt: var(--color-zinc-900);
+  --color-bg-base-alt: var(--color-neutral-900);
   --color-bg-base-light: var(--color-neutral-200);
+
+  --color-surface: #0c0c0c;
 }
 
 :root {
@@ -35,7 +38,6 @@
   );
 
   --color-linkedin-blue: oklch(51.56% 0.16327 254.746);
-  --color-linkedin-tailwind: var(--color-cyan-700);
 }
 
 @layer utilities {
@@ -48,10 +50,6 @@
     background-clip: text;
     color: transparent;
   }
-
-  .container {
-    @apply max-w-4xl;
-  }
 }
 
 @layer components {
@@ -63,10 +61,10 @@
     @apply flex flex-col items-center justify-center;
 
     & > .container {
-      @apply z-20;
+      @apply z-20 max-w-5xl mx-auto;
     }
 
-    &:not(#hero-section) {
+    &:not(#hero-section, #skills-section) {
       @apply min-h-screen;
     }
   }
