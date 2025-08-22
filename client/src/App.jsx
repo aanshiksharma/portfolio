@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-import { gsap } from "gsap";
 
 // Style
 import "./app.css";
@@ -8,7 +7,7 @@ import "./app.css";
 import ProjectPage from "./pages/ProjectPage";
 
 // Pages or Routes (whatever you wanna call them)
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import NoPage from "./pages/NoPage";
@@ -16,24 +15,8 @@ import Blog from "./pages/Blog";
 import Terminal from "./pages/Terminal";
 
 function App() {
-  document.getElementById("root").addEventListener("mousemove", (dets) => {
-    gsap.to("#custom-cursor", {
-      x: dets.x - 12,
-      y: dets.y - 12,
-      duration: 0.5,
-    });
-  });
-
   return (
     <>
-      <div
-        id="custom-cursor"
-        className="w-6 h-6 rounded-full
-        fixed top-0 left-0 z-10
-        bg-accent blur-sm
-        "
-      ></div>
-
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
