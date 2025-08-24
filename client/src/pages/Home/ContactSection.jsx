@@ -2,8 +2,12 @@ import { Icon } from "../../components/ui/Button";
 import TerminalContact from "./TerminalContact";
 
 function ContactSection() {
-  const baseClass =
-    "flex items-center justify-center gap-4 p-4 bg-surface text-text-base rounded-2xl border-1 border-text-base/10 transition-all ease-out duration-300";
+  const baseClass = `
+    ${"flex items-center justify-center gap-4"} 
+    ${"p-4 rounded-2xl border-1 border-text-base/10"}
+    ${"bg-surface shadow-sm shadow-[color:var(--color-white)]/5"}
+    ${"hover:text-text-base hover:border-text-base/30"}
+    ${"transition-all ease-out duration-300"}`;
 
   return (
     <section id="contact-section" className="">

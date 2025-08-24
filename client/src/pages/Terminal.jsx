@@ -1,7 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { v4 as uuidv4 } from "uuid";
-import gsap from "gsap";
+
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(SplitText);
 
 function Terminal() {
   const [dir, setDir] = useState("terminal");
@@ -16,8 +19,6 @@ function Terminal() {
       command: "intro",
     },
   ]);
-
-  gsap.registerPlugin(SplitText);
 
   const terminalRef = useRef(null);
   const lastCommand = useRef("");

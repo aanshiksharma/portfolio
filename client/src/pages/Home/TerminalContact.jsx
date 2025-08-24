@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import gsap from "gsap";
 import { v4 as uuidv4 } from "uuid";
+
+import { gsap } from "gsap";
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(SplitText);
 
 import { Icon } from "../../components/ui/Button";
 
@@ -17,8 +20,6 @@ function TerminalContact() {
     },
   ]);
   const [visible, setVisible] = useState(true);
-
-  gsap.registerPlugin(SplitText);
 
   const terminalRef = useRef(null);
   const lastCommand = useRef("");
@@ -38,11 +39,12 @@ function TerminalContact() {
     });
 
     // now animate the characters in a staggered fashion
-    gsap.from(split.chars, {
-      autoAlpha: 0, // fade in from opacity: 0 and visibility: hidden
-      duration: 0.01,
-      stagger: 0.0025,
-    });
+    if (split.chars.length > 0)
+      gsap.from(split.chars, {
+        autoAlpha: 0, // fade in from opacity: 0 and visibility: hidden
+        duration: 0.01,
+        stagger: 0.0025,
+      });
   }, [outputs]);
 
   const handleInputChange = (event) => {
@@ -208,7 +210,6 @@ function TerminalContact() {
               <input
                 ref={inputRef}
                 type="text"
-                autoFocus={true}
                 className="resize-none flex-1 outline-0"
                 value={inputValue}
                 onChange={(e) => handleInputChange(e)}

@@ -10,8 +10,8 @@ function ProjectsSection() {
         "A web-based recreation of the Windows 11 OS desktop experience, built with React, Redux, and Tailwind CSS, while using GSAP for animations.",
       technologies: ["React.js", "Tailwind CSS", "GSAP", "Redux TK"],
       links: {
-        github: "https://github.com/aanshiksharma/project-name",
-        site: "https://appName.vercel.app",
+        github: "https://github.com/aanshiksharma/windows-web",
+        site: "https://windows-web-os.vercel.app",
         readMore: "/projects/windows-web",
       },
     },
@@ -22,8 +22,8 @@ function ProjectsSection() {
         "This very website, was created on React and all the data is being fetched from MongoDB. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       technologies: ["React.js", "Tailwind CSS", "GSAP"],
       links: {
-        github: "https://github.com/aanshiksharma/project-name",
-        site: "https://appName.vercel.app",
+        github: "https://github.com/aanshiksharma/portfolio",
+        site: "/",
         readMore: "/projects/portfolio-website",
       },
     },
@@ -34,8 +34,8 @@ function ProjectsSection() {
         "A modern twist on the classic Snake Game built with HTML, CSS, and JavaScript. Features smooth controls, responsive design.",
       technologies: ["HTML5", "CSS3", "JavaScript"],
       links: {
-        github: "https://github.com/aanshiksharma/project-name",
-        site: "https://appName.vercel.app",
+        github: "https://github.com/aanshiksharma/Snake-Game",
+        site: "https://aanshiksharma.github.io/Snake-Game",
         readMore: "/projects/snake-game",
       },
     },

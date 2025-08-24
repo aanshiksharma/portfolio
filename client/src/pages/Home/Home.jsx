@@ -1,6 +1,8 @@
+// Global Components
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
+// Homepage Components
 import HeroSection from "./HeroSection";
 import SkillSection from "./SkillSection";
 import ProjectsSection from "./ProjectsSection";
@@ -10,6 +12,7 @@ function Home() {
   return (
     <>
       <Navbar />
+
       <main>
         <HeroSection />
         <SkillSection />

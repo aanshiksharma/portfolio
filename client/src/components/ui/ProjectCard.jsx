@@ -12,19 +12,17 @@ function ProjectCard({
 }) {
   if (projectsPageLink) {
     return (
-      <div
+      <Link
+        to="/projects"
         style={{ width: "max(468px, 20vw)" }}
-        className="border-1 border-text-base/10 rounded-lg flex items-center justify-center"
+        className="border-1 rounded-lg flex items-center justify-center font-bold transition ease-out duration-300 border-text-base/10
+        hover:text-text-base hover:border-text-base"
       >
-        <Link
-          to="/projects"
-          className="font-bold transition ease-out duration-300 hover:text-text-base"
-        >
-          See all projects {"->"}
-        </Link>
-      </div>
+        See all projects {"->"}
+      </Link>
     );
   }
+
   return (
     <div className="space-y-4 border-1 border-text-base/10 rounded-lg max-w-117 p-4">
       <h4 className="text-xl leading-8 text-text-base font-bold">{name}</h4>
@@ -39,6 +37,7 @@ function ProjectCard({
       <div className="flex items-center text-xs font-bold gap-4">
         <a
           href={links.site}
+          target="_blank"
           className="hover:text-text-base transition ease-out duration-300 font-bold flex gap-2 items-center"
         >
           <Icon icon="boxArrowUpRight" iconSize={20} />
@@ -47,6 +46,7 @@ function ProjectCard({
 
         <a
           href={links.github}
+          target="_blank"
           className="hover:text-text-base transition ease-out duration-300 font-bold flex gap-2 items-center"
         >
           <Icon icon="github" iconSize={20} />
@@ -55,9 +55,10 @@ function ProjectCard({
 
         <Link
           to={links.readMore}
+          target="_blank"
           className="hover:text-text-base transition ease-out duration-300 font-bold flex gap-2 items-center"
         >
-          {"Read More -->"}
+          {"Read More ->"}
         </Link>
       </div>
     </div>
