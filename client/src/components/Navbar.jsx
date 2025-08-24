@@ -36,17 +36,17 @@ function Navbar() {
                 {label}
               </NavLink>
             ))}
-
-            {/* Download Resume button */}
-            <Button
-              label="Resume"
-              href="/resume.pdf"
-              icon="download"
-              iconSize={12}
-              download="AanshikSharmaResume.pdf"
-              className="border-1 text-sm border-text-muted text-text-muted hover:text-text-base hover:bg-bg-base-alt hover:border-bg-base-alt"
-            />
           </nav>
+
+          {/* Download Resume button */}
+          <Button
+            label="Resume"
+            href="/resume.pdf"
+            icon="download"
+            iconSize={12}
+            download="AanshikSharmaResume.pdf"
+            className="border-1 text-sm border-text-muted text-text-muted hover:text-text-base hover:bg-bg-base-alt hover:border-bg-base-alt"
+          />
         </div>
       </header>
     </>

@@ -18,10 +18,7 @@ function SkillSection() {
         <div className="grid grid-cols-2 gap-x-8 gap-y-6">
           <div className="space-y-3">
             <h3 className="text-xl leading-6">Frontend Technologies ⚡</h3>
-            <ul
-              className="flex items-center flex-wrap gap-2
-              text-xs font-bold"
-            >
+            <ul className="flex items-center flex-wrap gap-2">
               {skills.frontend.map((skill) => (
                 <li key={skill}>
                   <SkillTag title={skill} />
@@ -33,10 +30,7 @@ function SkillSection() {
           <div className="space-y-3">
             <h3 className="text-xl leading-6">Backend Technologies 🛠️</h3>
 
-            <ul
-              className="flex items-center flex-wrap gap-2
-              text-xs font-bold"
-            >
+            <ul className="flex items-center flex-wrap gap-2">
               {skills.backend.map((skill) => (
                 <li key={skill}>
                   <SkillTag title={skill} />
@@ -48,10 +42,7 @@ function SkillSection() {
           <div className="space-y-3">
             <h3 className="text-xl leading-6">Programming Languages 💻</h3>
 
-            <ul
-              className="flex items-center flex-wrap gap-2
-              text-xs font-bold"
-            >
+            <ul className="flex items-center flex-wrap gap-2">
               {skills.languages.map((skill) => (
                 <li key={skill}>
                   <SkillTag title={skill} />
@@ -63,10 +54,7 @@ function SkillSection() {
           <div className="space-y-3">
             <h3 className="text-xl leading-6">Tools and Technologies 🧩</h3>
 
-            <ul
-              className="flex items-center flex-wrap gap-2
-                text-xs font-bold"
-            >
+            <ul className="flex items-center flex-wrap gap-2">
               {skills.tools.map((skill) => (
                 <li key={skill}>
                   <SkillTag title={skill} />

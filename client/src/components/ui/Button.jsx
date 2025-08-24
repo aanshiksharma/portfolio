@@ -6,6 +6,13 @@ import {
   Linkedin,
   Link45deg,
   FileEarmarkArrowDown,
+  BoxArrowUpRight,
+  Telephone,
+  Whatsapp,
+  X,
+  Square,
+  Dash,
+  CCircle,
 } from "react-bootstrap-icons";
 
 export const Icon = ({ icon, iconSize }) => {
@@ -20,8 +27,22 @@ export const Icon = ({ icon, iconSize }) => {
       return <Github size={iconSize} />;
     case "link45deg":
       return <Link45deg size={iconSize} />;
+    case "telephone":
+      return <Telephone size={iconSize} />;
+    case "whatsapp":
+      return <Whatsapp size={iconSize} />;
+    case "x":
+      return <X size={iconSize} />;
+    case "dash":
+      return <Dash size={iconSize} />;
+    case "square":
+      return <Square size={iconSize} />;
+    case "copyright":
+      return <CCircle size={iconSize} />;
     case "fileearmarkarrowdown":
       return <FileEarmarkArrowDown size={iconSize} />;
+    case "boxArrowUpRight":
+      return <BoxArrowUpRight size={iconSize} />;
     default:
       return <ExclamationCircle size={iconSize} />;
   }

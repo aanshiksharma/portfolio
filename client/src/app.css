@@ -14,7 +14,9 @@
   --color-danger: var(--color-red-500);
   --color-success: #86efac;
 
-  --color-linkedin-blue: rgb(10, 102, 194);
+  --color-linkedin-blue: var(--linkedin-blue);
+  --color-whatsapp-green: var(--whatsapp-green);
+  --color-google-blue: var(--google-blue);
 
   --color-bg-base: var(--color-zinc-950);
   --color-bg-base-alt: var(--color-neutral-900);
@@ -37,7 +39,9 @@
     var(--color-accent)
   );
 
-  --color-linkedin-blue: oklch(51.56% 0.16327 254.746);
+  --linkedin-blue: rgb(10, 102, 194);
+  --whatsapp-green: #25d366;
+  --google-blue: #4285f4;
 }
 
 @layer utilities {
@@ -64,7 +68,7 @@
       @apply z-20 max-w-5xl mx-auto;
     }
 
-    &:not(#hero-section, #skills-section) {
+    &:not(#hero-section, #skills-section, #projects-section) {
       @apply min-h-screen;
     }
   }
