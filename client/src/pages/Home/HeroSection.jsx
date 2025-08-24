@@ -1,21 +1,34 @@
+import { gsap } from "gsap";
+
+// Components
 import Button from "../../components/ui/Button";
 import { Icon } from "../../components/ui/Button";
+import { useEffect } from "react";
 
 function HeroSection() {
+  useEffect(() => {
+    gsap.from(".hero-section-gsap-animation", {
+      opacity: 0,
+      y: 20,
+      duration: 0.2,
+      stagger: 0.075,
+    });
+  }, []);
+
   return (
     <section id="hero-section" className="relative bg-gradient-custom">
       <div className="container max-w-4xl mt-12 px-8 py-12 space-y-8">
         <div className="profile-tag flex items-center justify-between">
           <div className="left flex items-center gap-4">
-            <div className="w-20 h-20 rounded-full overflow-hidden">
+            <div className="w-20 hero-section-gsap-animation h-20 rounded-full overflow-hidden">
               <img src="/adminImage.jpg" alt="" className="w-full h-full" />
             </div>
 
             <div className="profile-text space-y-1">
-              <h1 className="text-2xl text-text-base font-semibold leading-9">
+              <h1 className="hero-section-gsap-animation text-2xl text-text-base font-semibold leading-9">
                 👋 Hi, I'm Aanshik
               </h1>
-              <p className="text-sm leading-6">
+              <p className="hero-section-gsap-animation text-sm leading-6">
                 Web Developer | B.Tech Student at JSSATE, Noida
               </p>
             </div>
@@ -24,21 +37,21 @@ function HeroSection() {
           <div className="right flex items-center gap-3">
             <a
               href="mailto:aanshik16@gmail.com"
-              className="hover:text-text-base transition-colors duration-300 ease-out"
+              className="hero-section-gsap-animation hover:text-text-base transition-colors duration-300 ease-out"
             >
               <Icon icon="mail" iconSize={24} />
             </a>
 
             <a
               href="https://linkedin.com/in/aanshik-sharma"
-              className="hover:text-linkedin-blue transition-colors duration-300 ease-out"
+              className="hero-section-gsap-animation hover:text-linkedin-blue transition-colors duration-300 ease-out"
             >
               <Icon icon="linkedin" iconSize={24} />
             </a>
 
             <a
               href="https://github.com/aanshiksharma"
-              className="hover:text-text-base transition-colors duration-300 ease-out"
+              className="hero-section-gsap-animation hover:text-text-base transition-colors duration-300 ease-out"
             >
               <Icon icon="github" iconSize={24} />
             </a>
@@ -46,7 +59,7 @@ function HeroSection() {
             <a
               href="/resume.pdf"
               download="AanshikSharmaResume.pdf"
-              className="hover:text-text-base transition-colors duration-300 ease-out"
+              className="hero-section-gsap-animation hover:text-text-base transition-colors duration-300 ease-out"
             >
               <Icon icon="fileearmarkarrowdown" iconSize={24} />
             </a>
@@ -54,14 +67,14 @@ function HeroSection() {
         </div>
 
         <div className="space-y-4">
-          <p>
+          <p className="hero-section-gsap-animation">
             I am a{" "}
             <span className="text-text-base">Full Stack Web Developer</span>{" "}
             (front-end focused) specializing in building scalable, feature-rich
             applications with strong attention to detail.
           </p>
 
-          <p>
+          <p className="hero-section-gsap-animation">
             My work incorporates technologies like the{" "}
             <span className="text-text-base">
               MERN Stack, TailwindCSS, Redux Toolkit, GSAP, Sass
@@ -71,7 +84,7 @@ function HeroSection() {
           </p>
         </div>
 
-        <div className="flex gap-4">
+        <div className="hero-section-gsap-animation flex gap-4">
           <Button
             href="/resume.pdf"
             icon="download"
