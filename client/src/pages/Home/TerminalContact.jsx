@@ -14,7 +14,8 @@ function TerminalContact() {
     {
       id: uuidv4(),
       body: [
-        "Use this terminal to reach out or type 'help' for a list of commands.",
+        "Use this terminal to reach out or navigate the site...",
+        "Type 'help' for a list of commands.",
       ],
       command: "intro",
     },
@@ -52,14 +53,10 @@ function TerminalContact() {
   };
 
   const commandsList = [
+    { command: "navigate", desc: "Navigate to a designated page." },
+    { command: "connect", desc: "Go to a social media site." },
     { command: "help", desc: "See a list of all available commands." },
     { command: "intro", desc: "See the intro text on the console." },
-    { command: "projects", desc: "See a list of all projects." },
-    { command: "admin", desc: "Get to know the admin." },
-    {
-      command: "calc(expression)",
-      desc: "Calculate an expression.",
-    },
     { command: "clear or cls", desc: "Clears the terminal." },
   ];
 
@@ -68,7 +65,9 @@ function TerminalContact() {
     help: () => {
       const body = [
         PROMPT + inputValue,
+        "usage : <command> [<args>]",
         ...commandsList.map((com) => `${com.command} : ${com.desc}`),
+        "Use <command> --help for more details on individual commands",
       ];
       pushOutput(body, inputValue);
     },
@@ -83,17 +82,6 @@ function TerminalContact() {
         inputValue
       );
       setInputValue("");
-    },
-
-    projects: () => {
-      pushOutput(
-        [PROMPT + inputValue, "Projects command output here"],
-        inputValue
-      );
-    },
-
-    admin: () => {
-      pushOutput([PROMPT + inputValue, "Admin info here"], inputValue);
     },
 
     clear: () => {
@@ -174,9 +162,10 @@ function TerminalContact() {
 
             <p className="title">{`$aanshik.dev/${dir}`}</p>
           </div>
+
           <div
             ref={terminalRef}
-            className={`w-full h-50 overflow-x-hidden font-mono p-3 leading-5 bg-black ${
+            className={`w-full h-55 overflow-x-hidden font-mono p-3 leading-5 bg-black ${
               spacingCommands.includes(lastCommand.current.toLowerCase())
                 ? "space-y-0"
                 : "space-y-5"
