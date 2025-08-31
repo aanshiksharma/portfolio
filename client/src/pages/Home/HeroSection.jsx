@@ -1,17 +1,17 @@
 import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 // Components
 import Button from "../../components/ui/Button";
 import { Icon } from "../../components/ui/Button";
-import { useEffect } from "react";
 
 function HeroSection() {
-  useEffect(() => {
+  useGSAP(() => {
     gsap.from(".hero-section-gsap-animation", {
       opacity: 0,
       y: 20,
-      duration: 0.2,
-      stagger: 0.075,
+      duration: 0.3,
+      stagger: 0.1,
     });
   }, []);
 
