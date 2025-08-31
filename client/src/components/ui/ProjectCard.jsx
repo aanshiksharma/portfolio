@@ -52,14 +52,6 @@ function ProjectCard({
           <Icon icon="github" iconSize={20} />
           <span>Source Code</span>
         </a>
-
-        <Link
-          to={links.readMore}
-          target="_blank"
-          className="hover:text-text-base transition ease-out duration-300 font-bold flex gap-2 items-center"
-        >
-          {"Read More ->"}
-        </Link>
       </div>
     </div>
   );

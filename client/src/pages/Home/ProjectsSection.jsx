@@ -12,7 +12,6 @@ function ProjectsSection() {
       links: {
         github: "https://github.com/aanshiksharma/windows-web",
         site: "https://windows-web-os.vercel.app",
-        readMore: "/projects/windows-web",
       },
     },
     {
@@ -24,7 +23,6 @@ function ProjectsSection() {
       links: {
         github: "https://github.com/aanshiksharma/portfolio",
         site: "/",
-        readMore: "/projects/portfolio-website",
       },
     },
     {
@@ -36,7 +34,6 @@ function ProjectsSection() {
       links: {
         github: "https://github.com/aanshiksharma/Snake-Game",
         site: "https://aanshiksharma.github.io/Snake-Game",
-        readMore: "/projects/snake-game",
       },
     },
   ];
