@@ -81,3 +81,13 @@
 html {
   scroll-behavior: smooth;
 }
+
+.project-card-link-container {
+  .project-card-link {
+    @apply text-text-base;
+  }
+
+  &:has(.project-card-link:hover) .project-card-link:not(:hover) {
+    @apply text-text-muted;
+  }
+}

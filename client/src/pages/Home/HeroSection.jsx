@@ -91,7 +91,8 @@ function HeroSection() {
             label="Resume"
             download="AanshikSharmaResume.pdf"
             className="py-2 px-6 leading-5 border-2
-              border-text-muted hover:border-text-base hover:text-text-base"
+              border-text-base text-text-base
+              hover:bg-bg-base-alt"
           />
 
           <Button

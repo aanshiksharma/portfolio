@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import ProjectCard from "../../components/ui/ProjectCard";
 
 function ProjectsSection() {
@@ -42,7 +41,7 @@ function ProjectsSection() {
     <section id="projects-section" className="">
       <div className="container max-w-5xl px-8 py-12 space-y-8">
         <h2 className="font-semibold text-3xl leading-10 text-text-base">
-          Selected Work
+          Featured Projects
         </h2>
 
         <div className="flex flex-wrap gap-4">

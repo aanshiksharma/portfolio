@@ -34,11 +34,11 @@ function ProjectCard({
         ))}
       </div>
 
-      <div className="flex items-center text-xs font-bold gap-4">
+      <div className="flex items-center text-xs font-bold gap-4 project-card-link-container">
         <a
           href={links.site}
           target="_blank"
-          className="hover:text-text-base transition ease-out duration-300 font-bold flex gap-2 items-center"
+          className="transition ease-out duration-300 font-bold flex gap-2 items-center project-card-link"
         >
           <Icon icon="boxArrowUpRight" iconSize={20} />
           <span>View Live</span>
@@ -47,7 +47,7 @@ function ProjectCard({
         <a
           href={links.github}
           target="_blank"
-          className="hover:text-text-base transition ease-out duration-300 font-bold flex gap-2 items-center"
+          className="transition ease-out duration-300 font-bold flex gap-2 items-center project-card-link"
         >
           <Icon icon="github" iconSize={20} />
           <span>Source Code</span>
