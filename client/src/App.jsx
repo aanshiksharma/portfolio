@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Style
 import "./app.css";
@@ -6,14 +6,14 @@ import "./app.css";
 // Pages or Routes (whatever you wanna call them)
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects";
-import NoPage from "./pages/NoPage";
+import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import Terminal from "./pages/Terminal";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <Router>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
@@ -21,9 +21,9 @@ function App() {
           <Route path="/blog" element={<Blog />} />
 
           {/* Any other path gets a page does not exist error */}
-          <Route path="*" element={<NoPage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </>
   );
 }
