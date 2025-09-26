@@ -69,7 +69,8 @@ function ContactSection() {
           </div>
         </div>
 
-        <TerminalContact />
+        {/* Won't be used untill it is completed in other branch and will be merged through a pull request */}
+        {/* <TerminalContact /> */}
       </div>
     </section>
   );

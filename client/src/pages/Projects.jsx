@@ -6,7 +6,7 @@ function Projects() {
       <Navbar />
 
       <main>
-        <section className="">Projects</section>
+        <section className="">This page is still being prepared.</section>
       </main>
     </>
   );
