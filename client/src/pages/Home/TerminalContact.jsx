@@ -1,11 +1,12 @@
+// THIS WILL BE UPLOADED TO THE REPO LATER WHEN IT IS COMPLETED
+// THE CURRENT VERSION IS BEING DELETED FROM THE REPO UNTILL IT IS COMPLETED
+
 import { useState, useRef, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(SplitText);
-
-import { Icon } from "../../components/ui/Button";
 
 function TerminalContact() {
   const [dir, setDir] = useState("connect");
