@@ -1,26 +1,61 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--color-neutral-100);
+  --foreground: var(--color-neutral-600);
+
+  --surface: var(--color-neutral-50);
+
+  --primary: var(--color-neutral-900);
+  --secondary: var(--color-neutral-700);
+  --muted: var(--color-neutral-500);
+  --accent: var(--color-blue-600);
+
+  --dark-background: var(--color-neutral-950);
+  --dark-foreground: var(--color-neutral-400);
+
+  --dark-surface: var(--color-neutral-900);
+
+  --dark-primary: var(--color-neutral-50);
+  --dark-secondary: var(--color-neutral-300);
+  --dark-muted: var(--color-neutral-500);
+  --dark-accent: var(--color-blue-400);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-surface: var(--surface);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+
+  --color-dark-background: var(--dark-background);
+  --color-dark-foreground: var(--dark-foreground);
+
+  --color-dark-surface: var(--dark-surface);
+
+  --color-dark-primary: var(--dark-primary);
+  --color-dark-secondary: var(--dark-secondary);
+  --color-dark-muted: var(--dark-muted);
+  --color-dark-accent: var(--dark-accent);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--primary);
   font-family: Arial, Helvetica, sans-serif;
+
+  -ms-overflow-style: none;
+  scrollbar-width: 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
