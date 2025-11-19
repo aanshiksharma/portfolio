@@ -1,0 +1,67 @@
+[{
+  "_id": {
+    "$oid": "68e52151f3ff5e4634c4a029"
+  },
+  "title": "Windows Web",
+  "skills": [
+    "ReactJS",
+    "Redux",
+    "Redux Toolkit",
+    "Tailwind CSS",
+    "GSAP"
+  ],
+  "featured": true,
+  "description": "Windows Web is a web-based recreation of the Windows OS desktop experience, built with React, Redux, and Tailwind CSS.\r\nCurrently, in the Developer Preview phase, meaning it’s fully interactive but still under active development.",
+  "projectLink": "https://windows-web-os.vercel.app",
+  "githubLink": "https://github.com/aanshiksharma/windows-web",
+  "coverImage": {
+    "fileName": "windows-web-cover.png",
+    "publicId": "projects-cover-images/ntawygxcu0izhlmxt0gs",
+    "url": "https://res.cloudinary.com/dzvc73ibk/image/upload/v1760190898/projects-cover-images/ntawygxcu0izhlmxt0gs.png",
+    "uploadedAt": {
+      "$date": "2025-10-11T13:55:03.467Z"
+    }
+  },
+  "otherImages": [],
+  "meta": {
+    "status": "published"
+  },
+  "createdAt": {
+    "$date": "2025-10-07T14:18:57.839Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "68ea62584228c84ec8fb7cc6"
+  },
+  "title": "Portfolio Manager",
+  "skills": [
+    "React",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT"
+  ],
+  "featured": true,
+  "description": "A web application enabling effortless portfolio updates and content management without code changes.",
+  "projectLink": "https://portfolio-manager-cms.vercel.app",
+  "githubLink": "https://github.com/aanshiksharma/portfolio-manager",
+  "coverImage": {
+    "fileName": "portfolio-manager-cover.png",
+    "publicId": "projects-cover-images/ofpuyj7ba75pjwy7svpu",
+    "url": "https://res.cloudinary.com/dzvc73ibk/image/upload/v1760191060/projects-cover-images/ofpuyj7ba75pjwy7svpu.png",
+    "uploadedAt": {
+      "$date": "2025-10-11T13:57:44.382Z"
+    }
+  },
+  "otherImages": [],
+  "meta": {
+    "status": "published"
+  },
+  "createdAt": {
+    "$date": "2025-10-11T13:57:44.385Z"
+  },
+  "__v": 0
+}]

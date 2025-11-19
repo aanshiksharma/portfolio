@@ -20,6 +20,8 @@
   --dark-secondary: var(--color-neutral-300);
   --dark-muted: var(--color-neutral-500);
   --dark-accent: var(--color-blue-400);
+
+  --font-serif: "Playfair Display", serif;
 }
 
 @theme inline {
@@ -42,6 +44,8 @@
   --color-dark-secondary: var(--dark-secondary);
   --color-dark-muted: var(--dark-muted);
   --color-dark-accent: var(--dark-accent);
+
+  --font-serif: var(--font-serif);
 }
 
 html {
