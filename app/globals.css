@@ -11,13 +11,13 @@
   --muted: var(--color-neutral-500);
   --accent: var(--color-blue-600);
 
-  --dark-background: var(--color-neutral-950);
-  --dark-foreground: var(--color-neutral-400);
+  --dark-background: var(--color-neutral-900);
+  --dark-foreground: var(--color-neutral-300);
 
-  --dark-surface: var(--color-neutral-900);
+  --dark-surface: var(--color-neutral-950);
 
   --dark-primary: var(--color-neutral-50);
-  --dark-secondary: var(--color-neutral-300);
+  --dark-secondary: var(--color-neutral-400);
   --dark-muted: var(--color-neutral-500);
   --dark-accent: var(--color-blue-400);
 

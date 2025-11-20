@@ -23,7 +23,7 @@ function AboutImage() {
         trigger: mainContainerRef.current,
         scroller: "body",
         start: "top 85%",
-        end: "bottom bottom",
+        end: "+=20%",
         scrub: 3,
       },
     });
