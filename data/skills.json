@@ -1,0 +1,244 @@
+[
+  {
+    "_id": {
+      "$oid": "68e54c8dd60d8ed7722875e9"
+    },
+    "name": "Tailwind CSS",
+    "categoryName": "Frontend Technologies",
+    "category": {
+      "$oid": "68e405aff3af76928cbae1d6"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e54c98d60d8ed7722875f4"
+    },
+    "name": "Java",
+    "categoryName": "Programming Languages",
+    "category": {
+      "$oid": "68e54c98d60d8ed7722875f2"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e54ca9d60d8ed772287609"
+    },
+    "name": "JavaScript",
+    "categoryName": "Programming Languages",
+    "category": {
+      "$oid": "68e54c98d60d8ed7722875f2"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68ea5f254228c84ec8fb7bcd"
+    },
+    "name": "C",
+    "categoryName": "Programming Languages",
+    "category": {
+      "$oid": "68e54c98d60d8ed7722875f2"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68ea5f414228c84ec8fb7bdd"
+    },
+    "name": "Python",
+    "categoryName": "Programming Languages",
+    "category": {
+      "$oid": "68e54c98d60d8ed7722875f2"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68ea5f624228c84ec8fb7bf1"
+    },
+    "name": "Redux Toolkit",
+    "categoryName": "Frontend Technologies",
+    "category": {
+      "$oid": "68e405aff3af76928cbae1d6"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68ea5f6f4228c84ec8fb7bfb"
+    },
+    "name": "GSAP",
+    "categoryName": "Frontend Technologies",
+    "category": {
+      "$oid": "68e405aff3af76928cbae1d6"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68ea5f794228c84ec8fb7c05"
+    },
+    "name": "Bootstrap",
+    "categoryName": "Frontend Technologies",
+    "category": {
+      "$oid": "68e405aff3af76928cbae1d6"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68ea5f824228c84ec8fb7c0f"
+    },
+    "name": "Figma",
+    "categoryName": "Frontend Technologies",
+    "category": {
+      "$oid": "68e405aff3af76928cbae1d6"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68ea5fe84228c84ec8fb7c25"
+    },
+    "name": "Node.js",
+    "categoryName": "Backend Technologies and APIs",
+    "category": {
+      "$oid": "6921a10988a09eb87f2b2304"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68ea5ffe4228c84ec8fb7c40"
+    },
+    "name": "Express.js",
+    "categoryName": "Backend Technologies and APIs",
+    "category": {
+      "$oid": "6921a10988a09eb87f2b2304"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68f348485afd503f3e916992"
+    },
+    "name": "React",
+    "categoryName": "Frontend Technologies",
+    "category": {
+      "$oid": "68e405aff3af76928cbae1d6"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68f34c965afd503f3e916a2c"
+    },
+    "name": "JWT Authentication",
+    "categoryName": "Backend Technologies and APIs",
+    "category": {
+      "$oid": "6921a10988a09eb87f2b2304"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6921a04288a09eb87f2b22b1"
+    },
+    "name": "Git",
+    "categoryName": "Tools and Platforms",
+    "category": {
+      "$oid": "6921a04188a09eb87f2b22af"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6921a04e88a09eb87f2b22b9"
+    },
+    "name": "GitHub",
+    "categoryName": "Tools and Platforms",
+    "category": {
+      "$oid": "6921a04188a09eb87f2b22af"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6921a06788a09eb87f2b22c1"
+    },
+    "name": "Vercel",
+    "categoryName": "Tools and Platforms",
+    "category": {
+      "$oid": "6921a04188a09eb87f2b22af"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6921a07088a09eb87f2b22c9"
+    },
+    "name": "Render",
+    "categoryName": "Tools and Platforms",
+    "category": {
+      "$oid": "6921a04188a09eb87f2b22af"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6921a08188a09eb87f2b22d1"
+    },
+    "name": "Postman",
+    "categoryName": "Tools and Platforms",
+    "category": {
+      "$oid": "6921a04188a09eb87f2b22af"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6921a18288a09eb87f2b2335"
+    },
+    "name": "Headless CMS / API Integration",
+    "categoryName": "Backend Technologies and APIs",
+    "category": {
+      "$oid": "6921a10988a09eb87f2b2304"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68ea60144228c84ec8fb7c54"
+    },
+    "name": "REST APIs",
+    "categoryName": "Backend Technologies and APIs",
+    "category": {
+      "$oid": "6921a10988a09eb87f2b2304"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6921a19b88a09eb87f2b233d"
+    },
+    "name": "State Management",
+    "categoryName": "Backend Technologies and APIs",
+    "category": {
+      "$oid": "6921a10988a09eb87f2b2304"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68ea600b4228c84ec8fb7c4a"
+    },
+    "name": "MongoDB",
+    "categoryName": "Backend Technologies and APIs",
+    "category": {
+      "$oid": "6921a10988a09eb87f2b2304"
+    },
+    "__v": 0
+  }
+]

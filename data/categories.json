@@ -1,0 +1,30 @@
+[
+  {
+    "_id": {
+      "$oid": "68e405aff3af76928cbae1d6"
+    },
+    "name": "Frontend Technologies",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6921a10988a09eb87f2b2304"
+    },
+    "name": "Backend Technologies and APIs",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "68e54c98d60d8ed7722875f2"
+    },
+    "name": "Programming Languages",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6921a04188a09eb87f2b22af"
+    },
+    "name": "Tools and Platforms",
+    "__v": 0
+  }
+]

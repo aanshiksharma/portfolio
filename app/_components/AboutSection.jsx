@@ -9,9 +9,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 import AboutImage from "./AboutSection/AboutImage";
 
-const Scene = dynamic(() => import("@/components/Scene"), {
-  ssr: false,
-});
+const Scene = dynamic(
+  () => import("@/app/_components/AboutSection/AboutRobotScene"),
+  {
+    ssr: false,
+  }
+);
 
 function AboutSection() {
   const aboutSectionRef = useRef();

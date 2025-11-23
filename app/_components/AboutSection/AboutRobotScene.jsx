@@ -3,9 +3,9 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 
-import Robot from "./Robot";
+import Robot from "./AboutRobot";
 
-export default function Scene() {
+function Scene() {
   return (
     <Canvas>
       <ambientLight intensity={0.6} />
@@ -17,3 +17,5 @@ export default function Scene() {
     </Canvas>
   );
 }
+
+export default Scene;
