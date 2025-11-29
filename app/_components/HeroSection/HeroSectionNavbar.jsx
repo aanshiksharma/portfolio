@@ -60,7 +60,13 @@ function HeroSectionNavbar() {
         ref={rightItemRef}
         className="rounded-full px-4 py-1.5 flex items-center gap-3 bg-primary text-dark-secondary place-self-end"
       >
-        <Link href={"/"} className="flex items-center gap-2 group">
+        <Link
+          href={
+            "https://drive.google.com/file/d/1LIN0u6y-M1vXP8pAl9nUXaLM8l1ny9Vq/view"
+          }
+          target="_blank"
+          className="flex items-center gap-2 group"
+        >
           <span>Download Resume</span>
           <HiOutlineArrowRight className="text-lg group-hover:translate-x-1/4 transition ease-out duration-500" />
         </Link>

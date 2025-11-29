@@ -23,29 +23,31 @@ function SkillsData() {
 
     timeline.from(blurBackgroundRef.current, {
       opacity: 0,
-      yPercent: 10,
+      scale: 0.7,
       duration: 0.5,
-      ease: "power1.out",
+      ease: "power2.out",
     });
 
     timeline
       .from(
         fromLeft,
         {
-          xPercent: -50,
+          xPercent: -25,
           opacity: 0,
           duration: 0.75,
           stagger: 0.3,
+          ease: "power2.out",
         },
         "0.5"
       )
       .from(
         fromRight,
         {
-          xPercent: 50,
+          xPercent: 25,
           opacity: 0,
           duration: 0.75,
           stagger: 0.3,
+          ease: "power3.out",
         },
         "0.5"
       );
@@ -65,7 +67,7 @@ function SkillsData() {
     >
       <div
         ref={blurBackgroundRef}
-        className="flex flex-wrap justify-center gap-y-12 gap-x-2 px-10 py-12 rounded-2xl ring ring-dark-foreground/10 bg-background/5 backdrop-blur-md max-w-4xl"
+        className="overflow-hidden flex flex-wrap justify-center gap-y-12 gap-x-2 px-10 py-12 rounded-2xl ring ring-dark-foreground/10 bg-background/5 backdrop-blur-md max-w-4xl"
       >
         {categories.map((category, index) => (
           <div

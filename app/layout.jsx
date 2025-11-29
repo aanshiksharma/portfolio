@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Navbar from "@/components/Navbar";
 import HeroSectionNavbar from "@/components/HeroSectionNavbar";
+import Footer from "@/components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         {/* <Navbar /> */}
         <HeroSectionNavbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

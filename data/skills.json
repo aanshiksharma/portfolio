@@ -133,6 +133,17 @@
   },
   {
     "_id": {
+      "$oid": "68f348485afd503f3e916991"
+    },
+    "name": "NextJs",
+    "categoryName": "Frontend Technologies",
+    "category": {
+      "$oid": "68e405aff3af76928cbae1d6"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
       "$oid": "68f34c965afd503f3e916a2c"
     },
     "name": "JWT Authentication",
