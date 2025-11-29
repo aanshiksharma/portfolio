@@ -20,7 +20,7 @@ function ProjectsSection() {
           scroller: "body",
           start: "top top",
           end: "+=15%",
-          scrub: 4,
+          scrub: 3,
         },
       },
       ">"
@@ -68,7 +68,7 @@ function ProjectsSection() {
   return (
     <section id="projects" className="">
       <div className="py-55 flex items-center justify-center">
-        <h2 className="text-9xl text-center font-semibold tracking-tight uppercase flex items-center gap-3">
+        <h2 className="text-9xl text-center font-semibold tracking-tight uppercase flex items-center gap-6">
           <span className="fromLeft relative">Featured</span>
           <span className="fromRight relative">Projects</span>
         </h2>

@@ -14,12 +14,22 @@ function ContactSection() {
   useGSAP(() => {
     const timeline = gsap.timeline();
 
+    gsap.fromTo(
+      "body",
+      { backgroundColor: "#171717" },
+      {
+        backgroundColor: "#f5f5f5",
+        scrollTrigger: {
+          trigger: contactSectionRef.current,
+          scroller: "body",
+          start: "top center",
+          end: "+=15%",
+          scrub: 3,
+        },
+      }
+    );
+
     timeline
-      .fromTo(
-        "body",
-        { backgroundColor: "#171717" },
-        { backgroundColor: "#f5f5f5", duration: 1, ease: "linear" }
-      )
       .from(
         ".text-bg-animation",
         {
@@ -77,7 +87,7 @@ function ContactSection() {
       className="relative h-screen overflow-hidden"
     >
       <div className="p-12 flex items-center gap-6 h-screen">
-        <div className="text-bg-animation rounded-2xl flex flex-col justify-between flex-1 basis-1/2 h-full bg-dark-foreground p-8">
+        <div className="relative text-bg-animation rounded-2xl flex flex-col justify-between flex-1 basis-1/2 h-full bg-[url('/contact-image-2.jpg')] bg-no-repeat bg-center p-8 overflow-hidden">
           <h4 className="text-animation text-7xl">Let's Connect</h4>
 
           <a
@@ -92,7 +102,7 @@ function ContactSection() {
 
         <div className="image-bg-animation rounded-2xl overflow-hidden bg-dark-foreground flex-1 basis-1/2 h-full">
           <Image
-            src={"/contact-image.jpg"}
+            src={"/about-image.jpg"}
             width={300}
             height={20}
             alt="aanshik's image"
