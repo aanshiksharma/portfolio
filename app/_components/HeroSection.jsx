@@ -67,28 +67,27 @@ function HeroSection() {
   }, []);
 
   return (
-    <section id="hero" className="relative h-screen overflow-hidden">
+    <section id="hero" className="relative h-dvh overflow-hidden">
       {/* <HeroSectionNavbar /> */}
       <HeroSectionVideo />
 
-      <div className="backdrop-blur-sm flex flex-col justify-end gap-8 px-8 h-full bg-accent/20">
-        <div className="flex justify-end pr-20">
+      <div className="backdrop-blur-sm flex flex-col justify-end gap-20 lg:gap-8 px-4 lg:px-8 h-full bg-accent/20">
+        <div className="flex justify-end lg:pr-20">
           <p
             ref={descriptionRef}
-            className="relative text-3xl max-w-md text-balance font-light tracking-tighter text-dark-foreground"
+            className="relative lg:text-3xl max-w-3xs lg:max-w-md text-balance font-light tracking-tighter text-dark-primary/90"
           >
-            Full Stack Web Developer crafting unforgettable experiences Lorem
-            ipsum dolor sit amet.
+            Full Stack Web Developer building practical applications and
+            continuously learning.
           </p>
         </div>
 
         <h1
           ref={headingRef}
-          className="text-[18rem] text-dark-primary/90 leading-none tracking-tighter font-light -mb-6"
+          className="text-7xl lg:text-[18rem] lg:-mb-6 text-dark-primary/90 leading-none tracking-tighter font-light self-center"
         >
           aanshik
-          <span className="text-9xl text-dark-primary/35 bg-clip-text font-medium tracking-tight">
-            {""}
+          <span className="text-xl lg:text-9xl text-dark-primary/35 bg-clip-text font-medium tracking-tight">
             sharma
           </span>
         </h1>

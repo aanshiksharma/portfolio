@@ -24,8 +24,8 @@ function SkillsData() {
     timeline.from(blurBackgroundRef.current, {
       opacity: 0,
       scale: 0.7,
-      duration: 0.5,
-      ease: "power2.out",
+      duration: 0.25,
+      ease: "power1.out",
     });
 
     timeline
@@ -34,22 +34,22 @@ function SkillsData() {
         {
           xPercent: -25,
           opacity: 0,
-          duration: 0.75,
-          stagger: 0.3,
-          ease: "power2.out",
+          duration: 0.5,
+          stagger: 0.15,
+          ease: "power1.out",
         },
-        "0.5"
+        "0.25"
       )
       .from(
         fromRight,
         {
           xPercent: 25,
           opacity: 0,
-          duration: 0.75,
-          stagger: 0.3,
-          ease: "power3.out",
+          duration: 0.5,
+          stagger: 0.15,
+          ease: "power1.out",
         },
-        "0.5"
+        "0.25"
       );
 
     ScrollTrigger.create({

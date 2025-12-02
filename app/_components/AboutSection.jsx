@@ -51,17 +51,16 @@ function AboutSection() {
         <Scene />
       </div>
 
-      <h2 className="description text-4xl text-balance max-w-4xl relative">
-        I am a B.Tech student at JSS Academy of Technical Education, Noida, with
-        a strong focus on Full Stack Web Development.
+      <h2 className="description text-4xl text-balance max-w-5xl relative">
+        I am a B.Tech student at <span className="">JSSATEN</span> with strong
+        focus and consistency on Full Stack Web Development.
       </h2>
 
       <AboutImage />
 
       <h2 className="description text-4xl text-balance max-w-3xl self-end relative">
-        I specialize in building scalable, feature-rich applications and enjoy
-        crafting smooth, engaging web experiences that blend performance with
-        creativity.
+        I build full-stack applications with a focus on performance,
+        functionality, and smooth user experience.
       </h2>
     </section>
   );

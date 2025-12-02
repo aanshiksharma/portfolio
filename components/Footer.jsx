@@ -32,7 +32,7 @@ const socials = [
 
 function Footer() {
   return (
-    <footer className="flex flex-col gap-30 overflow-hidden pt-20 px-12">
+    <footer className="flex flex-col gap-30 bg-background overflow-hidden pt-20 px-12">
       <div className="flex justify-between">
         <div className="flex flex-col gap-4">
           <h6 className="text-xl text-muted flex items-center gap-2">
@@ -44,6 +44,7 @@ function Footer() {
               <li key={id}>
                 <a
                   href={url}
+                  target="_blank"
                   className={`flex items-center gap-2 hover:bg-primary hover:text-dark-primary transition ease-out duration-300 ring rounded-full ring-primary px-6 py-2`}
                 >
                   <span>{label}</span>

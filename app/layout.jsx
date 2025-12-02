@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} ${playfairDisplay.variable} antialiased`}
+        className={`${poppins.className} ${playfairDisplay.variable} antialiased overflow-x-hidden`}
       >
         {/* <Navbar /> */}
         <HeroSectionNavbar />
