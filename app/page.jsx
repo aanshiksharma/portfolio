@@ -1,3 +1,8 @@
+"use client";
+
+import { Suspense } from "react";
+
+import Loading from "./loading";
 import HeroSection from "./_components/HeroSection";
 import ProjectsSection from "./_components/ProjectsSection";
 import SkillsSection from "./_components/SkillsSection";
@@ -7,11 +12,14 @@ import ContactSection from "./_components/ContactSection";
 function Home() {
   return (
     <main>
-      <HeroSection />
-      <AboutSection />
-      <ProjectsSection />
-      <SkillsSection />
-      <ContactSection />
+      {/* <Loading /> */}
+      <Suspense fallback={<Loading />}>
+        <HeroSection />
+        <AboutSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <ContactSection />
+      </Suspense>
     </main>
   );
 }
