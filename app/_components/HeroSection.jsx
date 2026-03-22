@@ -37,7 +37,7 @@ function HeroSection() {
           scrub: 2,
           start: "top 30%",
         },
-      }
+      },
     );
 
     gsap.from(headingRef.current, {
@@ -62,7 +62,7 @@ function HeroSection() {
           scrub: 2,
           start: "top top",
         },
-      }
+      },
     );
   }, []);
 
@@ -84,10 +84,19 @@ function HeroSection() {
 
         <h1
           ref={headingRef}
-          className="text-7xl lg:text-[18rem] lg:-mb-6 text-dark-primary/90 leading-none tracking-tighter font-light self-center"
+          // text-7xl lg:text-[18rem] text-dark-primary/90
+          className={`
+            text-[19vw]
+            text-dark-primary/90 leading-none tracking-tighter font-light
+            lg:-mb-6 self-center`}
         >
           aanshik
-          <span className="text-xl lg:text-9xl text-dark-primary/35 bg-clip-text font-medium tracking-tight">
+          <span
+            className={`
+              text-xl lg:text-9xl
+              text-dark-primary/35 bg-clip-text font-medium tracking-tight
+              `}
+          >
             sharma
           </span>
         </h1>

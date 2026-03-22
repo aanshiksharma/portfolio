@@ -30,7 +30,7 @@ function ContactSection() {
           duration: 0.5,
           ease: "power2.out",
         },
-        "0"
+        "0",
       );
 
     ScrollTrigger.create({

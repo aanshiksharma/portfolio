@@ -1,20 +1,14 @@
 "use client";
 
 import { useRef } from "react";
-import dynamic from "next/dynamic";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 import AboutImage from "./AboutSection/AboutImage";
-
-const Scene = dynamic(
-  () => import("@/app/_components/AboutSection/AboutRobotScene"),
-  {
-    ssr: false,
-  }
-);
+import ToolTip from "./common/ToolTip";
 
 function AboutSection() {
   const aboutSectionRef = useRef();
@@ -38,22 +32,24 @@ function AboutSection() {
 
       return () => context.revert();
     },
-    { scope: aboutSectionRef }
+    { scope: aboutSectionRef },
   );
 
   return (
     <section
       ref={aboutSectionRef}
       id="about"
-      className="relative min-h-screen px-12 py-50 flex flex-col gap-50"
+      className="px-12 py-50 flex flex-col gap-50"
     >
-      <div className="absolute inset-0 w-full h-full bg-transparent">
-        <Scene />
-      </div>
-
       <h2 className="description text-4xl text-balance max-w-5xl relative">
-        I am a B.Tech student at <span className="">JSSATEN</span> with strong
-        focus and consistency on Full Stack Web Development.
+        I am a B.Tech student at{" "}
+        <ToolTip
+          text={"JSS Academy of Technical Education, Noida"}
+          className={"inline"}
+        >
+          <span className="hover:underline">JSSATEN</span>
+        </ToolTip>{" "}
+        with strong focus and consistency on Full Stack Web Development.
       </h2>
 
       <AboutImage />
