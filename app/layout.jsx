@@ -21,6 +21,9 @@ const playfairDisplay = Playfair_Display({
 export const metadata = {
   title: "Aanshik - Full Stack Web Developer",
   description: "",
+  verification: {
+    google: "iPBfqR1EI-t3Uzh3k_NoVX8b2mHPeZcaENYOjKdPpoA",
+  },
 };
 
 export default function RootLayout({ children }) {
