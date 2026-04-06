@@ -23,7 +23,7 @@ function ProjectsSection() {
           scrub: 3,
         },
       },
-      ">"
+      ">",
     );
 
     gsap.fromTo(
@@ -38,7 +38,7 @@ function ProjectsSection() {
           end: "+=15%",
           scrub: 3,
         },
-      }
+      },
     );
 
     const headingTimeline = gsap.timeline({
@@ -61,14 +61,14 @@ function ProjectsSection() {
         xPercent: 50,
         opacity: 0,
       },
-      "<"
+      "<",
     );
   }, []);
 
   return (
     <section id="projects" className="">
       <div className="py-55 flex items-center justify-center">
-        <h2 className="text-9xl text-center font-semibold tracking-tight uppercase flex items-center gap-6">
+        <h2 className="text-[9rem] text-center font-semibold tracking-tight uppercase flex items-center gap-6">
           <span className="fromLeft relative">Featured</span>
           <span className="fromRight relative">Projects</span>
         </h2>
