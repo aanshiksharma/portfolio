@@ -1,28 +1,11 @@
-"use client";
-
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
-
 import { HiArrowUp } from "react-icons/hi";
+
+import { useProjectDataAnimation } from "@/app/hooks/projectAnimations";
 
 function ProjectCardData({ project }) {
   const descriptionRef = useRef();
-
-  useGSAP(() => {
-    gsap.from(descriptionRef.current, {
-      y: 50,
-      opacity: 0,
-      scrollTrigger: {
-        trigger: descriptionRef.current,
-        start: "top 85%",
-        end: "bottom 85%",
-        scrub: 2,
-      },
-    });
-  });
+  useProjectDataAnimation(descriptionRef);
 
   return (
     <article className="py-30 flex flex-col gap-50">

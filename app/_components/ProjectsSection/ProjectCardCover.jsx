@@ -1,31 +1,12 @@
-"use client";
-
 import Image from "next/image";
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+
+import { useProjectCardAnimation } from "@/app/hooks/projectAnimations";
 
 function ProjectCardCover({ project }) {
   const projectCoverRef = useRef();
 
-  useGSAP(() => {
-    gsap.from(projectCoverRef.current, {
-      width: window.innerWidth,
-      height:
-        window.innerHeight > 900 ? window.innerHeight / 2 : window.innerHeight,
-      borderRadius: 0,
-      scrollTrigger: {
-        trigger: projectCoverRef.current,
-        start: "top 55%",
-        end: "bottom bottom",
-        scrub: 1.5,
-      },
-    });
-
-    console.log(window.innerWidth, window.innerHeight);
-  }, []);
+  useProjectCardAnimation(projectCoverRef);
 
   return (
     <div
