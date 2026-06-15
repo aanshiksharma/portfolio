@@ -28,7 +28,7 @@ export const useSidebarNavigation = () => {
     );
 
     timeline.fromTo(
-      "#sidebar ul li",
+      "#sidebar ul li, hr, .resumeLink",
       { opacity: 0, x: 20 },
       {
         opacity: 1,
@@ -43,7 +43,7 @@ export const useSidebarNavigation = () => {
 
   const closeSidebar = () => {
     timeline.fromTo(
-      "#sidebar ul li",
+      "#sidebar ul li, hr, .resumeLink",
       { opcaity: 1, x: 0 },
       {
         opacity: 0,

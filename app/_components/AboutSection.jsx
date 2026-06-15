@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 import AboutImage from "./AboutSection/AboutImage";
 import ToolTip from "./common/ToolTip";
 
-function AboutSection() {
+function AboutSection({ profile }) {
   const styles = {
     paragraphContainer:
       "min-h-[35vh] py-[10vw] flex items-center md:text-2xl xl:text-[2vw] leading-relaxed",
@@ -46,7 +46,7 @@ function AboutSection() {
       className="relative z-1 grid overflow-hidden leading-relaxed px-4 lg:px-12"
     >
       <div className={`${styles.paragraphContainer} max-w-4/5 md:max-w-3/5`}>
-        <p className="description">
+        {/* <p className="description">
           I am a B.Tech student at{" "}
           <ToolTip
             text={"JSS Academy of Technical Education, Noida"}
@@ -55,7 +55,9 @@ function AboutSection() {
             <span className="hover:underline">JSSATEN</span>
           </ToolTip>{" "}
           with strong focus and consistency on Full Stack Web Development.
-        </p>
+        </p> */}
+
+        <p className="description">{profile.about[0]}</p>
       </div>
 
       <AboutImage />
@@ -63,11 +65,7 @@ function AboutSection() {
       <div
         className={`${styles.paragraphContainer} place-self-end w-full md:max-w-4/5 text-right text-balance`}
       >
-        <p className="description">
-          I specialize in building scalable, feature-rich applications and enjoy
-          crafting smooth, engaging web experiences that blend performance with
-          creativity.
-        </p>
+        <p className="description">{profile.about[1]}</p>
       </div>
     </section>
   );
