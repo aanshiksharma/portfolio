@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { HiOutlineArrowRight } from "react-icons/hi";
+import Image from "next/image";
 
 const navs = [
   { url: "#projects", label: "Projects" },
@@ -35,17 +36,19 @@ function HeroSectionNavbar() {
   }, []);
 
   return (
-    <header className="fixed inset-0 bottom-auto z-1 grid grid-cols-3 items-center px-12 py-6 text-sm">
+    <header className="fixed top-0 w-screen z-10 grid grid-cols-3 align-center px-4 lg:px-12 py-6 text-sm">
       <div
         ref={leftItemRef}
-        className="rounded-full px-5 py-1.5 bg-background/30 backdrop-blur-md text-primary place-self-start"
+        className="rounded-full px-5 py-1.5 bg-background/30 backdrop-blur-md place-self-start"
       >
-        <Link href={"/"}>aanshik sharma</Link>
+        <Link href={"/"}>
+          <Image src={"/logo.png"} alt="as" width={100} height={5} />
+        </Link>
       </div>
 
       <nav
         ref={middleItemRef}
-        className="rounded-full px-6 py-1.5 flex items-center gap-3 bg-background/30 backdrop-blur-md text-primary place-self-center"
+        className="rounded-full px-6 py-1.5 flex items-center gap-3 bg-background/30 backdrop-blur-md place-self-center"
       >
         {navs.map(({ url, label }, index) => {
           return (
@@ -60,7 +63,7 @@ function HeroSectionNavbar() {
 
       <div
         ref={rightItemRef}
-        className="rounded-full px-4 py-1.5 flex items-center gap-3 bg-primary text-dark-secondary place-self-end"
+        className="rounded-full px-4 py-1.5 flex items-center gap-3 bg-dark-background text-dark-foreground place-self-end"
       >
         <Link
           href={

@@ -2,8 +2,8 @@ import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
-import HeroSectionNavbar from "@/components/HeroSectionNavbar";
 import Footer from "@/components/Footer";
+import SidebarNav from "@/components/SidebarNav";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -32,9 +32,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.className} ${playfairDisplay.variable} antialiased overflow-x-hidden`}
       >
-        {/* <Navbar /> */}
-        <HeroSectionNavbar />
-        {children}
+        <Navbar />
+        <SidebarNav />
+
+        <main>{children}</main>
+
         <Footer />
       </body>
     </html>

@@ -1,8 +1,8 @@
 function ToolTip({ children, text, className }) {
   return (
-    <div className={`relative group cursor-default ${className}`}>
+    <span className={`relative group cursor-default ${className}`}>
       {children}
-      <div
+      <span
         className={`
               group-hover:opacity-100 opacity-0 pointer-events-none
               absolute left-1/2 -translate-x-1/2 -top-9 py-2
@@ -12,8 +12,8 @@ function ToolTip({ children, text, className }) {
             `}
       >
         {text || "Tooltip Text"}
-      </div>
-    </div>
+      </span>
+    </span>
   );
 }
 

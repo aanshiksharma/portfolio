@@ -1,0 +1,6 @@
+[
+  { "url": "#about", "label": "About" },
+  { "url": "#projects", "label": "Projects" },
+  { "url": "#skills", "label": "Skills" },
+  { "url": "#contact", "label": "Contact" }
+]
