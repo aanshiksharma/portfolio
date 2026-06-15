@@ -36,14 +36,14 @@ function HeroSectionNavbar() {
     <header className="absolute inset-0 bottom-auto z-1 grid grid-cols-3 items-center px-12 py-6 text-sm">
       <div
         ref={leftItemRef}
-        className="rounded-full px-5 py-1.5 bg-background/20 backdrop-blur-2xl text-primary place-self-start"
+        className="rounded-full px-5 py-1.5 bg-background/20 backdrop-blur-2xl text-foreground place-self-start"
       >
         <Link href={"/"}>aanshik</Link> is available for work
       </div>
 
       <nav
         ref={middleItemRef}
-        className="rounded-full px-6 py-1.5 flex items-center gap-3 bg-background/20 backdrop-blur-2xl text-primary place-self-center"
+        className="rounded-full px-6 py-1.5 flex items-center gap-3 bg-background/20 backdrop-blur-2xl text-foreground place-self-center"
       >
         {navs.map(({ url, label }, index) => {
           return (
@@ -58,7 +58,7 @@ function HeroSectionNavbar() {
 
       <div
         ref={rightItemRef}
-        className="rounded-full px-4 py-1.5 flex items-center gap-3 bg-primary text-dark-secondary place-self-end"
+        className="rounded-full px-4 py-1.5 flex items-center gap-3 bg-dark-background text-dark-secondary place-self-end"
       >
         <Link
           href={

@@ -1,83 +1,58 @@
-"use client";
+import { useEffect, useState } from "react";
 
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import {
+  useBackgroundAnimation,
+  useHeadingAnimation,
+} from "../hooks/projectAnimations";
 
 import ProjectCard from "./ProjectsSection/ProjectCard";
 import projects from "@/data/projects.json";
 
 function ProjectsSection() {
-  useGSAP(() => {
-    gsap.fromTo(
-      "body",
-      { backgroundColor: "#f5f5f5" },
-      {
-        backgroundColor: "#171717",
-        scrollTrigger: {
-          trigger: "#projects",
-          scroller: "body",
-          start: "top top",
-          end: "+=15%",
-          scrub: 3,
-        },
-      },
-      ">",
-    );
+  // const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(false);
+  // const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
+  useHeadingAnimation();
 
-    gsap.fromTo(
-      "#projects h2",
-      { color: "#0a0a0a" },
-      {
-        color: "#fafafa",
-        scrollTrigger: {
-          trigger: "#projects",
-          scroller: "body",
-          start: "top top",
-          end: "+=15%",
-          scrub: 3,
-        },
-      },
-    );
+  // useEffect(() => {
+  //   const fetchProjects = async () => {
+  //     try {
+  //       const res = await fetch(`${BACKEND_URL}/api/projects`);
+  //       const data = await res.json();
+  //       setProjects(data);
+  //     } catch (err) {
+  //       console.log(err);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
 
-    const headingTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#projects h2",
-        scroller: "body",
-        start: "top 80%",
-        end: "bottom 80%",
-        scrub: 2,
-      },
-    });
-
-    headingTimeline.from("#projects h2 .fromLeft", {
-      xPercent: -50,
-      opacity: 0,
-    });
-    headingTimeline.from(
-      "#projects h2 .fromRight",
-      {
-        xPercent: 50,
-        opacity: 0,
-      },
-      "<",
-    );
-  }, []);
+  //   fetchProjects();
+  // }, []);
 
   return (
-    <section id="projects" className="">
-      <div className="py-55 flex items-center justify-center">
-        <h2 className="text-[9rem] text-center font-semibold tracking-tight uppercase flex items-center gap-6">
+    <section id="projects">
+      <div className="sticky -top-1/3 h-screen flex items-center justify-center bg-background overflow-hidden">
+        <h2 className="text-[9dvw] text-center font-semibold tracking-tight uppercase flex items-center gap-2 md:gap-6">
           <span className="fromLeft relative">Featured</span>
           <span className="fromRight relative">Projects</span>
         </h2>
       </div>
 
-      <div className="flex flex-col gap-15">
-        {projects.map((project) => (
-          <ProjectCard key={project._id.$oid} project={project} />
-        ))}
+      <div className="relative z-1 flex flex-col bg-dark-background px-4 lg:px-12">
+        {loading ? (
+          <h4 className="text-2xl text-center text-dark-foreground">
+            Loading Projects...
+          </h4>
+        ) : (
+          projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              project={project}
+              rightToLeft={index % 2 !== 0}
+            />
+          ))
+        )}
       </div>
     </section>
   );

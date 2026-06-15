@@ -2,24 +2,24 @@
 
 :root {
   --background: var(--color-neutral-100);
-  --foreground: var(--color-neutral-600);
+  --foreground: var(--color-neutral-900);
 
   --surface: var(--color-neutral-50);
 
-  --primary: var(--color-neutral-900);
+  --primary: var(--color-teal-600);
   --secondary: var(--color-neutral-700);
   --muted: var(--color-neutral-500);
-  --accent: var(--color-blue-600);
+  --accent: var(--color-neutral-600);
 
   --dark-background: var(--color-neutral-900);
-  --dark-foreground: var(--color-neutral-300);
+  --dark-foreground: var(--color-neutral-50);
 
   --dark-surface: var(--color-neutral-950);
 
-  --dark-primary: var(--color-neutral-50);
-  --dark-secondary: var(--color-neutral-400);
-  --dark-muted: var(--color-neutral-500);
-  --dark-accent: var(--color-blue-400);
+  --dark-primary: var(--color-teal-500);
+  --dark-secondary: var(--color-neutral-300);
+  --dark-muted: var(--color-neutral-400);
+  --dark-accent: var(--color-neutral-500);
 
   --font-serif: "Playfair Display", serif;
   --font-ss-body: Poppins, sans-serif;
@@ -56,7 +56,7 @@ html {
 
 body {
   background: var(--background);
-  color: var(--primary);
+  color: var(--foreground);
   overflow-x: hidden;
 
   -ms-overflow-style: none;

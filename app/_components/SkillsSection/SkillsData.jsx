@@ -38,7 +38,7 @@ function SkillsData() {
           stagger: 0.15,
           ease: "power1.out",
         },
-        "0.25"
+        "0.25",
       )
       .from(
         fromRight,
@@ -49,7 +49,7 @@ function SkillsData() {
           stagger: 0.15,
           ease: "power1.out",
         },
-        "0.25"
+        "0.25",
       );
 
     ScrollTrigger.create({
@@ -63,28 +63,30 @@ function SkillsData() {
   return (
     <div
       ref={containerRef}
-      className="wrapper absolute inset-0 flex items-center justify-center"
+      className="min-h-screen px-4 flex items-center justify-center"
     >
       <div
         ref={blurBackgroundRef}
-        className="overflow-hidden flex flex-wrap justify-center gap-y-12 gap-x-2 px-10 py-12 rounded-2xl ring ring-dark-foreground/10 bg-background/5 backdrop-blur-md max-w-4xl"
+        className="overflow-hidden grid grid-cols-2 gap-4 md:gap-8 px-4 py-6 md:px-8 md:py-12 rounded-3xl ring ring-dark-foreground/10 bg-dark-surface/10 backdrop-blur-md max-w-4xl"
       >
         {categories.map((category, index) => (
           <div
             key={category._id.$oid}
-            className={`basis-sm max-w-md flex-1 flex flex-col gap-3
+            className={`basis-sm max-w-md flex-1 flex flex-col gap-4 max-md:text-xs
                 ${index % 2 === 0 ? "from-left" : "from-right"}
             `}
           >
-            <h4 className="text-xl text-dark-primary">{category.name}</h4>
+            <h4 className="text-[1.5em] text-dark-foreground">
+              {category.name}
+            </h4>
 
-            <ul className="flex flex-wrap items-center gap-1.5">
+            <ul className="flex flex-wrap items-center gap-2 md:gap-3">
               {skills
                 .filter((skill) => skill.category.$oid === category._id.$oid)
                 .map((skill) => (
                   <li
                     key={skill._id.$oid}
-                    className="bg-foreground/30 hover:bg-foreground/60 backdrop-blur-2xl px-3 py-1 rounded-sm text-dark-secondary hover:text-dark-primary transition duration-300 ease-out cursor-default"
+                    className="bg-accent/30 hover:bg-accent/60 backdrop-blur-2xl px-2 md:px-3 py-0.5 rounded-[0.55em] text-dark-secondary hover:text-dark-foreground transition duration-300 ease-out cursor-default"
                   >
                     {skill.name}
                   </li>

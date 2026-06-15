@@ -11,6 +11,10 @@ import AboutImage from "./AboutSection/AboutImage";
 import ToolTip from "./common/ToolTip";
 
 function AboutSection() {
+  const styles = {
+    paragraphContainer:
+      "min-h-[35vh] py-[10vw] flex items-center md:text-2xl xl:text-[2vw] leading-relaxed",
+  };
   const aboutSectionRef = useRef();
 
   useGSAP(
@@ -39,25 +43,32 @@ function AboutSection() {
     <section
       ref={aboutSectionRef}
       id="about"
-      className="px-12 py-50 flex flex-col gap-50"
+      className="relative z-1 grid overflow-hidden leading-relaxed px-4 lg:px-12"
     >
-      <h2 className="description text-4xl text-balance max-w-5xl relative">
-        I am a B.Tech student at{" "}
-        <ToolTip
-          text={"JSS Academy of Technical Education, Noida"}
-          className={"inline"}
-        >
-          <span className="hover:underline">JSSATEN</span>
-        </ToolTip>{" "}
-        with strong focus and consistency on Full Stack Web Development.
-      </h2>
+      <div className={`${styles.paragraphContainer} max-w-4/5 md:max-w-3/5`}>
+        <p className="description">
+          I am a B.Tech student at{" "}
+          <ToolTip
+            text={"JSS Academy of Technical Education, Noida"}
+            className={"inline"}
+          >
+            <span className="hover:underline">JSSATEN</span>
+          </ToolTip>{" "}
+          with strong focus and consistency on Full Stack Web Development.
+        </p>
+      </div>
 
       <AboutImage />
 
-      <h2 className="description text-4xl text-balance max-w-3xl self-end relative">
-        I build full-stack applications with a focus on performance,
-        functionality, and smooth user experience.
-      </h2>
+      <div
+        className={`${styles.paragraphContainer} place-self-end w-full md:max-w-4/5 text-right text-balance`}
+      >
+        <p className="description">
+          I specialize in building scalable, feature-rich applications and enjoy
+          crafting smooth, engaging web experiences that blend performance with
+          creativity.
+        </p>
+      </div>
     </section>
   );
 }
