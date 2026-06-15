@@ -14,7 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 import { useSidebarNavigation } from "@/app/hooks/useSidebarNavigation";
 import navs from "./navlinks.data.json";
 
-function Navbar() {
+function Navbar({ profile }) {
   const headerRef = useRef(null);
   const { openSidebar } = useSidebarNavigation();
 
@@ -57,9 +57,7 @@ function Navbar() {
           </nav>
 
           <Link
-            href={
-              "https://drive.google.com/file/d/1LIN0u6y-M1vXP8pAl9nUXaLM8l1ny9Vq/view"
-            }
+            href={profile.resumeLink}
             target="_blank"
             className={`
               px-3 py-1 rounded-xl

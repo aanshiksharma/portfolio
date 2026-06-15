@@ -26,18 +26,22 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children }) {
+import { getProfile } from "@/lib/queries/profile";
+
+export default async function RootLayout({ children }) {
+  const profile = await getProfile();
+
   return (
     <html lang="en">
       <body
         className={`${poppins.className} ${playfairDisplay.variable} antialiased overflow-x-hidden`}
       >
-        <Navbar />
-        <SidebarNav />
+        <Navbar profile={profile} />
+        <SidebarNav profile={profile} />
 
         <main>{children}</main>
 
-        <Footer />
+        <Footer profile={profile} />
       </body>
     </html>
   );

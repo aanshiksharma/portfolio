@@ -1,16 +1,14 @@
 "use client";
 
 import { useRef } from "react";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger);
 
-import skills from "@/data/skills.json";
-import categories from "@/data/categories.json";
-
-function SkillsData() {
-  const containerRef = useRef();
+function SkillsData({ skills, categories }) {
   const blurBackgroundRef = useRef();
 
   useGSAP(() => {
@@ -73,7 +71,7 @@ function SkillsData() {
     >
       {categories.map((category, index) => (
         <div
-          key={category._id.$oid}
+          key={category._id}
           className={`basis-sm max-w-md flex-1 flex flex-col gap-4 max-md:text-xs
                 ${index % 2 === 0 ? "from-left" : "from-right"}
             `}
@@ -82,10 +80,10 @@ function SkillsData() {
 
           <ul className="flex flex-wrap items-center gap-2 md:gap-3">
             {skills
-              .filter((skill) => skill.category.$oid === category._id.$oid)
+              .filter((skill) => skill.category === category._id)
               .map((skill) => (
                 <li
-                  key={skill._id.$oid}
+                  key={skill._id}
                   className="bg-accent/30 hover:bg-accent/60 backdrop-blur-2xl px-2 md:px-3 py-0.5 rounded-[0.55em] text-dark-secondary hover:text-dark-foreground transition duration-300 ease-out cursor-default"
                 >
                   {skill.name}

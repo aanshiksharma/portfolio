@@ -1,30 +1,25 @@
-"use client";
+import { getProjects } from "@/lib/queries/projects";
+import { getSkills } from "@/lib/queries/skills";
+import { getCategories } from "@/lib/queries/categories";
+import { getProfile } from "@/lib/queries/profile";
 
-import { Suspense } from "react";
+import HomePageClient from "./HomePageClient";
 
-import Loading from "./loading";
-import HeroSection from "./_components/HeroSection";
-import RoleBanner from "./_components/RoleBanner";
-import ProjectsSection from "./_components/ProjectsSection";
-import SkillsSection from "./_components/SkillsSection";
-import AboutSection from "./_components/AboutSection";
-import ContactSection from "./_components/ContactSection";
-import Cursor from "./_components/Cursor";
+async function Home() {
+  const [projects, skills, categories, profile] = await Promise.all([
+    getProjects(),
+    getSkills(),
+    getCategories(),
+    getProfile(),
+  ]);
 
-function Home() {
   return (
-    <main>
-      {/* <Loading /> */}
-      <Suspense fallback={<Loading />}>
-        <Cursor />
-        <HeroSection />
-        <RoleBanner />
-        <AboutSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <ContactSection />
-      </Suspense>
-    </main>
+    <HomePageClient
+      projects={projects}
+      skills={skills}
+      categories={categories}
+      profile={profile}
+    />
   );
 }
 

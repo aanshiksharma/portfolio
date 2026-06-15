@@ -4,11 +4,11 @@ import { HiArrowRight } from "react-icons/hi";
 
 const styles = {
   linksContainer:
-    "[@media(hover:none)]:grid lg:flex grid-cols-2 md:grid-cols-3 items-center gap-2 md:gap-6",
+    "[@media(hover:none)]:grid lg:flex grid-cols-2 md:grid-cols-2 items-center gap-2 md:gap-6",
   links: {
     base: `
       group flex items-center [@media(hover:none)]:justify-center gap-2
-      [@media(hover:hover)]:text-dark-muted whitespace-nowrap
+      [@media(hover:hover)]:text-dark-muted whitespace-nowrap text-sm
       transition ease-out duration-300
       [@media(hover:none)]:py-2.5 rounded-xl
     `,
@@ -24,28 +24,26 @@ const styles = {
 
 function ProjectCard({ project, rightToLeft = false }) {
   return (
-    <section
+    <div
       className={`
-        flex flex-wrap items-end gap-8 max-lg:flex-col-reverse
+        flex flex-wrap lg:items-end gap-8 max-lg:flex-col-reverse
         ${rightToLeft && "flex-row-reverse"}
         text-dark-foreground
         [@media(hover:hover)]:min-h-screen lg:py-32
       `}
     >
-      <div className="basis-sm space-y-8">
-        <div className="space-y-8 max-lg:px-4">
-          <div className="space-y-4">
-            <h2 className="text-2xl">{project.title}</h2>
-            <p className="leading-relaxed text-dark-secondary text-pretty line-clamp-3">
-              {project.description}
-            </p>
-          </div>
+      <div className="basis-sm space-y-8 max-lg:px-4">
+        <div className="space-y-4">
+          <h2 className="text-2xl">{project.title}</h2>
+          <p className="leading-relaxed text-dark-secondary text-pretty line-clamp-3">
+            {project.description}
+          </p>
+        </div>
 
-          <div className="flex flex-wrap gap-y-2 gap-x-6 text-dark-muted text-xs">
-            {project.skills.map((skill, index) => (
-              <span key={index}>{skill}</span>
-            ))}
-          </div>
+        <div className="flex flex-wrap gap-y-2 gap-x-6 text-dark-muted text-xs">
+          {project.skills.map((skill, index) => (
+            <span key={index}>{skill}</span>
+          ))}
         </div>
 
         <div className={styles.linksContainer}>
@@ -90,7 +88,7 @@ function ProjectCard({ project, rightToLeft = false }) {
           className="object-cover object-top w-full h-auto"
         />
       </div>
-    </section>
+    </div>
   );
 }
 

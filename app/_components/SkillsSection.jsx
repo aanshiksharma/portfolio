@@ -1,6 +1,6 @@
 import SkillsData from "./SkillsSection/SkillsData";
 
-function SkillsSection() {
+function SkillsSection({ skills, categories }) {
   return (
     <section
       id="skills"
@@ -12,7 +12,7 @@ function SkillsSection() {
         </h2>
       </div>
 
-      <SkillsData />
+      <SkillsData skills={skills} categories={categories} />
     </section>
   );
 }
