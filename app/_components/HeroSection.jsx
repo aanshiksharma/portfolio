@@ -88,7 +88,7 @@ function HeroSection() {
 
       <Image
         ref={logoRef}
-        src="/logo.png"
+        src="/logo-light.png"
         alt="logo"
         height={450}
         width={3000}
