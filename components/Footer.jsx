@@ -73,7 +73,7 @@ async function Footer({ profile }) {
         <p className="self-start">Designed and developed by —</p>
 
         <Image
-          src="/logo.png"
+          src="/logo-light.png"
           alt="logo"
           height={221}
           width={1440}

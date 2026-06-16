@@ -36,7 +36,7 @@ function Navbar({ profile }) {
         <div className="">
           <Link href="/">
             <Image
-              src="/logo.png"
+              src="/logo-light.png"
               alt="aanshik"
               width={100}
               height={5}

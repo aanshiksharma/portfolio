@@ -21,7 +21,7 @@ function Loading() {
           </p>
 
           <Image
-            src="/logo.png"
+            src="/logo-dark.png"
             alt="aanshik sharma"
             width={200}
             height={10}
