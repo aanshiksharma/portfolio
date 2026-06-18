@@ -81,6 +81,8 @@ export const metadata = {
   },
 };
 
+export const revalidate = 120;
+
 export default async function RootLayout({ children }) {
   const profile = await getProfile();
 

@@ -5,6 +5,8 @@ import { getProfile } from "@/lib/queries/profile";
 
 import HomePageClient from "./HomePageClient";
 
+export const revalidate = 120;
+
 async function Home() {
   const [projects, skills, categories, profile] = await Promise.all([
     getProjects(),
