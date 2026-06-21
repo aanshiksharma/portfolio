@@ -19,6 +19,12 @@ function ContactSection({ profile }) {
     const timeline = gsap.timeline();
 
     timeline
+      .from(".contact-background, .image-background", {
+        opacity: 0,
+        scale: 0.8,
+        duration: 0.5,
+        ease: "power2.out",
+      })
       .from(".text-animation", {
         xPercent: -25,
         opacity: 0,
@@ -34,13 +40,13 @@ function ContactSection({ profile }) {
           duration: 0.5,
           ease: "power2.out",
         },
-        "0",
+        "<",
       );
 
     ScrollTrigger.create({
       trigger: contactSectionRef.current,
       scroller: "body",
-      start: "top 50%",
+      start: "top 30%",
       onEnter: () => timeline.play(),
       onLeaveBack: () => timeline.reverse(),
     });
@@ -60,7 +66,7 @@ function ContactSection({ profile }) {
       >
         <div
           className={`
-          relative
+          relative contact-background overflow-hidden
           p-4 sm:p-8 min-h-[35dvh] bg-background/75 rounded-3xl
           flex flex-col justify-between
           [@media(hover:hover)]:lg:col-span-3 xl:col-span-4
@@ -79,13 +85,13 @@ function ContactSection({ profile }) {
           </a>
         </div>
 
-        <div className="image-animation rounded-3xl overflow-hidden [@media(hover:hover)]:lg:col-span-2 xl:col-span-2">
+        <div className="image-background bg-background/75 rounded-3xl overflow-hidden [@media(hover:hover)]:lg:col-span-2 xl:col-span-2">
           <Image
             src={"/about-image.jpg"}
             width={300}
             height={20}
             alt="aanshik's image"
-            className="object-cover object-center w-full h-full"
+            className="image-animation object-cover object-center w-full h-full"
           />
         </div>
       </section>
