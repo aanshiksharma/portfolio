@@ -1,58 +1,19 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { useRef } from "react";
-
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 
 import { HiArrowUp } from "react-icons/hi";
-
-import { iconMap } from "@/components/IconMap";
+import { useContactAnimation } from "../hooks/useContactAnimation";
 
 function ContactSection({ profile }) {
-  const contactSectionRef = useRef();
-
-  useGSAP(() => {
-    const timeline = gsap.timeline();
-
-    timeline
-      .from(".text-animation", {
-        xPercent: -25,
-        opacity: 0,
-        duration: 0.5,
-        stagger: 0.2,
-        ease: "power2.out",
-      })
-      .from(
-        ".image-animation",
-        {
-          xPercent: 25,
-          opacity: 0,
-          duration: 0.5,
-          ease: "power2.out",
-        },
-        "0",
-      );
-
-    ScrollTrigger.create({
-      trigger: contactSectionRef.current,
-      scroller: "body",
-      start: "top 50%",
-      onEnter: () => timeline.play(),
-      onLeaveBack: () => timeline.reverse(),
-    });
-  }, []);
+  useContactAnimation();
 
   return (
     <>
       <section
-        ref={contactSectionRef}
         id="contact"
         className={`
-        relative overflow-hidden
+         overflow-hidden
         min-h-dvh px-4 py-10 md:px-12 md:py-20
         bg-[url('/contact-image-2.jpg')] bg-no-repeat bg-center bg-fixed bg-cover
         grid [@media(hover:hover)]:lg:grid-cols-5 xl:grid-cols-6 gap-6
@@ -60,7 +21,7 @@ function ContactSection({ profile }) {
       >
         <div
           className={`
-          relative
+          relative contact-background overflow-hidden
           p-4 sm:p-8 min-h-[35dvh] bg-background/75 rounded-3xl
           flex flex-col justify-between
           [@media(hover:hover)]:lg:col-span-3 xl:col-span-4
@@ -79,13 +40,13 @@ function ContactSection({ profile }) {
           </a>
         </div>
 
-        <div className="image-animation rounded-3xl overflow-hidden [@media(hover:hover)]:lg:col-span-2 xl:col-span-2">
+        <div className="image-background bg-background/75 rounded-3xl overflow-hidden [@media(hover:hover)]:lg:col-span-2 xl:col-span-2">
           <Image
             src={"/about-image.jpg"}
             width={300}
             height={20}
             alt="aanshik's image"
-            className="object-cover object-center w-full h-full"
+            className="image-animation object-cover object-center w-full h-full"
           />
         </div>
       </section>
