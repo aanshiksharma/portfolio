@@ -1,19 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
 import { HiArrowUp } from "react-icons/hi";
 import { IconMap } from "./IconMap";
 
-async function Footer({ profile }) {
+import { useFooterAnimation } from "@/app/hooks/useFooterAnimation";
+
+function Footer({ profile }) {
+  useFooterAnimation();
+
   return (
     <footer className="flex flex-col gap-20 md:gap-30 lg:gap-40 bg-background overflow-hidden pb-2 pt-16 md:pt-20 px-4 md:px-12">
-      <section className="flex justify-between gap-6">
+      <section className="footer-top flex justify-between gap-6">
         <div className="flex flex-col gap-8">
           <h2 className="text-xl text-muted flex items-center gap-2">
             <span>Socials</span> <HiArrowUp className="rotate-45" />
           </h2>
 
-          <ul className="grid md:flex items-center gap-3 md:gap-6 text-lg">
+          <ul className="links grid md:flex items-center gap-3 md:gap-6 text-lg">
             {profile.socialMediaLinks.map((link, index) => (
               <li key={index}>
                 <a
@@ -56,7 +62,7 @@ async function Footer({ profile }) {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-4 items-center group">
+        <div className="top-button flex flex-col gap-4 items-center group">
           <Link
             href={"/"}
             className="rounded-xl bg-dark-background text-dark-foreground p-4 cursor-pointer group-hover:-translate-y-1 transiton ease-out duration-300"
@@ -69,7 +75,7 @@ async function Footer({ profile }) {
         </div>
       </section>
 
-      <section className="flex flex-col items-center justify-end gap-6 max-md:text-xs">
+      <section className="footer-logo flex flex-col items-center justify-end gap-6 max-md:text-xs">
         <p className="self-start">Designed and developed by —</p>
 
         <Image

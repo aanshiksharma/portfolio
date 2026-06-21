@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { useHeadingAnimation } from "../hooks/projectAnimations";
 
 import ProjectCard from "./ProjectsSection/ProjectCard";
@@ -16,7 +14,10 @@ function ProjectsSection({ projects }) {
         </h2>
       </div>
 
-      <section className="relative z-1 flex flex-col bg-dark-background px-4 lg:px-12 max-lg:py-20 max-lg:gap-20">
+      <section
+        id="projectsList"
+        className="relative z-1 flex flex-col bg-dark-background px-4 lg:px-12 max-lg:py-20 max-lg:gap-20 overflow-hidden"
+      >
         {projects.length > 0 ? (
           projects
             .filter((project) => project.featured)

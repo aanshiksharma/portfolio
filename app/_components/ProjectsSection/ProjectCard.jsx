@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
 import { HiArrowRight } from "react-icons/hi";
+import { useProjectCardAnimation } from "@/app/hooks/projectAnimations";
 
 const styles = {
   linksContainer:
@@ -23,16 +24,24 @@ const styles = {
 };
 
 function ProjectCard({ project, rightToLeft = false }) {
+  useProjectCardAnimation();
+
   return (
     <div
       className={`
+        projectCard
         flex flex-wrap lg:items-end gap-8 max-lg:flex-col-reverse
         ${rightToLeft && "flex-row-reverse"}
         text-dark-foreground
         [@media(hover:hover)]:min-h-screen lg:py-32
       `}
     >
-      <div className="basis-sm space-y-8 max-lg:px-4">
+      <div
+        className={`
+          ${rightToLeft ? "fromRight" : "fromLeft"}
+          basis-sm space-y-8 max-lg:px-4
+        `}
+      >
         <div className="space-y-4">
           <h2 className="text-2xl">{project.title}</h2>
           <p className="leading-relaxed text-dark-secondary text-pretty line-clamp-3">
@@ -42,7 +51,12 @@ function ProjectCard({ project, rightToLeft = false }) {
 
         <div className="flex flex-wrap gap-y-2 gap-x-6 text-dark-muted text-xs">
           {project.skills.map((skill, index) => (
-            <span key={index}>{skill}</span>
+            <span
+              key={index}
+              className="hover:text-dark-foreground cursor-default transition ease-out duration-300"
+            >
+              {skill}
+            </span>
           ))}
         </div>
 
@@ -79,7 +93,15 @@ function ProjectCard({ project, rightToLeft = false }) {
         </div>
       </div>
 
-      <div className="flex-1 w-full aspect-video bg-dark-secondary/5 max-lg:basis-1/2 rounded-2xl overflow-hidden shadow hover:shadow-lg shadow-dark-surface/50 transition-shadow ease-out duration-300">
+      <div
+        className={`
+          ${rightToLeft ? "fromLeft" : "fromRight"}
+          flex-1 max-lg:basis-1/2 w-full aspect-video
+          bg-dark-secondary/5
+          rounded-2xl overflow-hidden
+          shadow hover:shadow-lg shadow-dark-surface/50
+          transition-shadow ease-out duration-300`}
+      >
         <Image
           src={project.coverImage.url}
           alt={`${project.title} image`}
