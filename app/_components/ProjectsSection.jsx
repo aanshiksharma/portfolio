@@ -9,7 +9,7 @@ function ProjectsSection({ projects }) {
 
   return (
     <section id="projects">
-      <div className="sticky -top-1/8 md:-top-1/3 h-[60vh] md:h-screen flex items-center justify-center bg-background overflow-hidden">
+      <div className="sticky -top-1/8 md:-top-1/4 h-[60vh] md:h-screen flex items-center justify-center bg-background overflow-hidden">
         <h2 className="text-[15vw] md:text-[9vw] text-center font-semibold tracking-tight uppercase flex max-md:flex-col items-center md:gap-6">
           <span className="fromLeft relative">Featured</span>
           <span className="fromRight relative">Projects</span>
@@ -18,13 +18,15 @@ function ProjectsSection({ projects }) {
 
       <section className="relative z-1 flex flex-col bg-dark-background px-4 lg:px-12 max-lg:py-20 max-lg:gap-20">
         {projects.length > 0 ? (
-          projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              project={project}
-              rightToLeft={index % 2 !== 0}
-            />
-          ))
+          projects
+            .filter((project) => project.featured)
+            .map((project, index) => (
+              <ProjectCard
+                key={index}
+                project={project}
+                rightToLeft={index % 2 !== 0}
+              />
+            ))
         ) : (
           <div className="min-h-[30vh] flex flex-col gap-6 items-center justify-center text-dark-foreground px-4">
             <h2 className="text-2xl">No projects found.</h2>
