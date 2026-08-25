@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { HiArrowUp } from "react-icons/hi";
+import { LuArrowUp, LuArrowUpRight } from "react-icons/lu";
 import { IconMap } from "./IconMap";
 
 import { useFooterAnimation } from "@/app/hooks/useFooterAnimation";
@@ -16,7 +16,7 @@ function Footer({ profile }) {
       <section className="footer-top flex justify-between gap-6">
         <div className="flex flex-col gap-8">
           <h2 className="text-xl text-muted flex items-center gap-2">
-            <span>Socials</span> <HiArrowUp className="rotate-45" />
+            <span>Socials</span> <LuArrowUpRight />
           </h2>
 
           <ul className="links grid md:flex items-center gap-3 md:gap-6 text-lg">
@@ -26,8 +26,8 @@ function Footer({ profile }) {
                   href={link.link}
                   target="_blank"
                   className={`
-                    flex items-center gap-2
-                    px-4 md:px-6 py-2 w-fit
+                    flex items-center gap-3
+                    px-4 md:px-6 py-2 w-fit font-semibold
                     hover:bg-dark-background hover:text-dark-foreground
                     ring rounded-full ring-foreground
                     transition ease-out duration-300
@@ -45,13 +45,13 @@ function Footer({ profile }) {
 
             <li>
               <a
-                href={profile.email}
+                href={`mailto:${profile.email}`}
                 target="_blank"
                 className={`
-                    flex items-center gap-2
-                    px-4 md:px-6 py-2 w-fit
+                    flex items-center gap-3
+                    px-4 md:px-6 py-2 w-fit font-semibold
                     hover:bg-dark-background hover:text-dark-foreground
-                    ring rounded-full ring-foreground
+                    border rounded-full border-foreground
                     transition ease-out duration-300
                   `}
               >
@@ -68,7 +68,7 @@ function Footer({ profile }) {
             className="rounded-xl bg-dark-background text-dark-foreground p-4 cursor-pointer group-hover:-translate-y-1 transiton ease-out duration-300"
             title="Back to top"
           >
-            <HiArrowUp />
+            <LuArrowUp size={24} />
           </Link>
 
           <span className="text-balance text-center">Back to top</span>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
-import { HiArrowRight } from "react-icons/hi";
+import { LuArrowUpRight } from "react-icons/lu";
 import { useProjectCardAnimation } from "@/app/hooks/projectAnimations";
 
 const styles = {
@@ -76,8 +76,8 @@ function ProjectCard({ project, rightToLeft = false }) {
             href={project.projectLink}
           >
             <span>View Live</span>
-            <HiArrowRight
-              className={`${styles.icons} -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5`}
+            <LuArrowUpRight
+              className={`${styles.icons} group-hover:translate-x-1 group-hover:rotate-45`}
             />
           </a>
 

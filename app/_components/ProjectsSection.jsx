@@ -8,9 +8,9 @@ function ProjectsSection({ projects }) {
   return (
     <section id="projects">
       <div className="sticky -top-1/8 md:-top-1/4 h-[60vh] md:h-screen flex items-center justify-center bg-background overflow-hidden">
-        <h2 className="text-[15vw] md:text-[9vw] text-center font-semibold tracking-tight uppercase flex max-md:flex-col items-center md:gap-6">
-          <span className="fromLeft relative">Featured</span>
-          <span className="fromRight relative">Projects</span>
+        <h2 className="text-[25vw] md:text-[15vw] text-center leading-none tracking-tight uppercase flex max-md:flex-col items-center md:gap-8">
+          <span className="fromLeft relative font-display">Featured</span>
+          <span className="fromRight relative font-display">Projects</span>
         </h2>
       </div>
 
