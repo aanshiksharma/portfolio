@@ -1,4 +1,4 @@
-import { Playfair_Display, Poppins } from "next/font/google";
+import { Bebas_Neue, Manrope, Poppins } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/Navbar";
@@ -14,11 +14,17 @@ const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-const playfairDisplay = Playfair_Display({
-  variable: "--font-serif",
+const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
+
+const bebasNeue = Bebas_Neue({
+  variable: "--font-display",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400"],
 });
 
 export const metadata = {
@@ -89,7 +95,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} ${playfairDisplay.variable} antialiased overflow-x-hidden`}
+        className={`${poppins.className} ${manrope.className} ${bebasNeue.variable} antialiased overflow-x-hidden`}
       >
         <Navbar profile={profile} />
         <SidebarNav profile={profile} />

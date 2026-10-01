@@ -21,8 +21,9 @@
   --dark-muted: var(--color-neutral-400);
   --dark-accent: var(--color-neutral-500);
 
-  --font-serif: "Playfair Display", serif;
-  --font-ss-body: Poppins, sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: Manrope, Poppins, system-ui, sans-serif;
+  --font-heading: Poppins, system-ui, sans-serif;
 }
 
 @theme inline {
@@ -46,8 +47,9 @@
   --color-dark-muted: var(--dark-muted);
   --color-dark-accent: var(--dark-accent);
 
-  --font-serif: var(--font-serif);
-  --font-ss-body: var(--font-ss-body);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-heading: var(--font-heading);
 }
 
 html {
