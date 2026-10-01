@@ -13,7 +13,7 @@ function Footer({ profile }) {
 
   const footerLinksClassName = `
     flex items-center gap-3
-    px-4 md:px-6 py-2 w-fit font-semibold font-heading
+    px-4 md:px-6 py-2 w-fit font-heading
     hover:bg-dark-background hover:text-dark-foreground
     ring rounded-full ring-foreground
     transition ease-out duration-300
