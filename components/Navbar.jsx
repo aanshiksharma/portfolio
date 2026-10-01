@@ -87,6 +87,7 @@ function Navbar({ profile }) {
             <Image
               src="/logo-light.png"
               alt="aanshik"
+              loading="eager"
               width={140}
               height={5}
               className="h-full w-auto"

@@ -23,6 +23,7 @@
 
   --font-display: "Bebas Neue", sans-serif;
   --font-body: Manrope, Poppins, system-ui, sans-serif;
+  --font-heading: Poppins, system-ui, sans-serif;
 }
 
 @theme inline {
@@ -48,6 +49,7 @@
 
   --font-display: var(--font-display);
   --font-body: var(--font-body);
+  --font-heading: var(--font-heading);
 }
 
 html {
