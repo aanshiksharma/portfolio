@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
 import { LuArrowUpRight } from "react-icons/lu";
-import { useProjectCardAnimation } from "@/app/hooks/projectAnimations";
+import { useProjectCardAnimation } from "@/features/projects";
 
 const styles = {
   linksContainer:
@@ -23,7 +23,7 @@ const styles = {
   icons: "transition ease-out duration-300",
 };
 
-function ProjectCard({ project, rightToLeft = false }) {
+export function ProjectCard({ project, rightToLeft = false }) {
   useProjectCardAnimation();
 
   return (
@@ -113,5 +113,3 @@ function ProjectCard({ project, rightToLeft = false }) {
     </div>
   );
 }
-
-export default ProjectCard;

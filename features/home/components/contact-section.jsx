@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 
-import { useContactAnimation } from "../hooks/useContactAnimation";
+import { useContactAnimation } from "@/features/home";
 import { LuArrowUpRight } from "react-icons/lu";
 
-function ContactSection({ profile }) {
+export function ContactSection({ profile }) {
   useContactAnimation();
 
   return (
@@ -53,5 +53,3 @@ function ContactSection({ profile }) {
     </>
   );
 }
-
-export default ContactSection;

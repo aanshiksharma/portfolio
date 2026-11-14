@@ -1,4 +1,6 @@
-import { useLoader } from "@/app/hooks/useLoader";
+"use client";
+
+import { useLoader } from "@/hooks/useLoader";
 
 const animationConfig = {
   repeat: -1,
@@ -6,7 +8,7 @@ const animationConfig = {
   repeatDelay: 0.2,
 };
 
-function Loader() {
+export function Loader() {
   useLoader(animationConfig, 1, { max: 1, min: 0.05 }, { max: 1, min: 0.05 });
 
   return (
@@ -16,5 +18,3 @@ function Loader() {
     </div>
   );
 }
-
-export default Loader;

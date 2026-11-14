@@ -1,7 +1,9 @@
+"use client";
+
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-function Cursor() {
+export function Cursor() {
   useGSAP(() => {
     window.addEventListener("mousemove", (event) => {
       gsap.to("#cursor", {
@@ -20,5 +22,3 @@ function Cursor() {
     />
   );
 }
-
-export default Cursor;

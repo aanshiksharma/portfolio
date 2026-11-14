@@ -3,11 +3,11 @@ import { getSkills } from "@/lib/queries/skills";
 import { getCategories } from "@/lib/queries/categories";
 import { getProfile } from "@/lib/queries/profile";
 
-import HomePageClient from "./HomePageClient";
+import { HomePage } from "@/features/home";
 
 export const revalidate = 120;
 
-async function Home() {
+export default async function Home() {
   const [projects, skills, categories, profile] = await Promise.all([
     getProjects(),
     getSkills(),
@@ -15,14 +15,5 @@ async function Home() {
     getProfile(),
   ]);
 
-  return (
-    <HomePageClient
-      projects={projects}
-      skills={skills}
-      categories={categories}
-      profile={profile}
-    />
-  );
+  return <HomePage data={{ projects, skills, categories, profile }} />;
 }
-
-export default Home;

@@ -1,8 +1,6 @@
-import { useHeadingAnimation } from "../hooks/projectAnimations";
+import { useHeadingAnimation, ProjectCard } from "@/features/projects";
 
-import ProjectCard from "./ProjectsSection/ProjectCard";
-
-function ProjectsSection({ projects }) {
+export function ProjectsSection({ projects }) {
   useHeadingAnimation();
 
   return (
@@ -53,5 +51,3 @@ function ProjectsSection({ projects }) {
     </section>
   );
 }
-
-export default ProjectsSection;

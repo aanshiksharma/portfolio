@@ -9,7 +9,7 @@ import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-function AboutImage() {
+export function AboutImage() {
   const mainContainerRef = useRef();
   const imageRef = useRef();
   const bannerRef = useRef();
@@ -126,5 +126,3 @@ function AboutImage() {
     </div>
   );
 }
-
-export default AboutImage;

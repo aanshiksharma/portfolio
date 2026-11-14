@@ -7,10 +7,9 @@ import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-import AboutImage from "./AboutSection/AboutImage";
-import ToolTip from "./common/ToolTip";
+import { AboutImage } from "@/features/home";
 
-function AboutSection({ profile }) {
+export function AboutSection({ profile }) {
   const styles = {
     paragraphContainer:
       "min-h-[35vh] py-[10vw] flex items-center md:text-2xl xl:text-[2vw] leading-relaxed",
@@ -70,5 +69,3 @@ function AboutSection({ profile }) {
     </section>
   );
 }
-
-export default AboutSection;

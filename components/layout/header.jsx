@@ -11,10 +11,10 @@ import { LuArrowUpRight, LuMenu } from "react-icons/lu";
 
 gsap.registerPlugin(ScrollTrigger);
 
-import { useSidebarNavigation } from "@/app/hooks/useSidebarNavigation";
-import navs from "./navlinks.data.json";
+import { useSidebarNavigation } from "@/hooks/useSidebarNavigation";
+import { navigationLinks } from "@/features/navigation";
 
-function Navbar({ profile }) {
+export function Header({ profile }) {
   const headerRef = useRef(null);
   const prevScrollRef = useRef(0);
   const [top, setTop] = useState(true);
@@ -87,6 +87,7 @@ function Navbar({ profile }) {
             <Image
               src="/logo-light.png"
               alt="aanshik"
+              loading="eager"
               width={140}
               height={5}
               className="h-full w-auto"
@@ -97,12 +98,12 @@ function Navbar({ profile }) {
         <div className="hidden [@media(hover:hover)]:flex items-center gap-24">
           <nav>
             <ul className="flex items-center gap-12">
-              {navs.map((nav, index) => (
+              {navigationLinks.map((link) => (
                 <li
-                  key={index}
+                  key={link.id}
                   className="hover:text-foreground font-semibold uppercase transition ease-out duration-300"
                 >
-                  <Link href={nav.url}>{nav.label}</Link>
+                  <Link href={link.url}>{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -138,5 +139,3 @@ function Navbar({ profile }) {
     </header>
   );
 }
-
-export default Navbar;
