@@ -3,9 +3,9 @@
 import Image from "next/image";
 
 import { LuArrowUp, LuArrowUpRight } from "react-icons/lu";
-import { IconMap } from "../ui/IconMap";
+import { IconMap } from "@/components/ui/icon-map";
 
-import { useFooterAnimation } from "@/app/hooks/useFooterAnimation";
+import { useFooterAnimation } from "@/hooks/useFooterAnimation";
 
 export function Footer({ profile }) {
   useFooterAnimation();

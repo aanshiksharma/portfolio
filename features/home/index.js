@@ -13,3 +13,5 @@ export { SkillsSection } from "./components/skills-section";
 export { ContactSection } from "./components/contact-section";
 
 export { useContactAnimation } from "./hooks/useContactAnimation";
+
+export { HomePage } from "./components/home-page";

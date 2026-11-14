@@ -1,4 +1,4 @@
-import { useLoader } from "@/app/hooks/useLoader";
+import { useLoader } from "@/hooks/useLoader";
 
 const animationConfig = {
   repeat: -1,

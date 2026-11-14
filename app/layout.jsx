@@ -7,6 +7,7 @@ import { Sidebar } from "@/components/layout/sidebar";
 
 import { faviconConfig } from "@/config/favicon";
 import { getProfile } from "@/lib/queries/profile";
+import { Cursor } from "@/components/ui/cursor";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -97,6 +98,7 @@ export default async function RootLayout({ children }) {
       <body
         className={`${poppins.className} ${manrope.className} ${bebasNeue.variable} antialiased overflow-x-hidden`}
       >
+        <Cursor />
         <Header profile={profile} />
         <Sidebar profile={profile} />
 

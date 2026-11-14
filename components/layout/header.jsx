@@ -11,7 +11,7 @@ import { LuArrowUpRight, LuMenu } from "react-icons/lu";
 
 gsap.registerPlugin(ScrollTrigger);
 
-import { useSidebarNavigation } from "@/app/hooks/useSidebarNavigation";
+import { useSidebarNavigation } from "@/hooks/useSidebarNavigation";
 import { navigationLinks } from "@/features/navigation";
 
 export function Header({ profile }) {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useSidebarNavigation } from "@/app/hooks/useSidebarNavigation";
+import { useSidebarNavigation } from "@/hooks/useSidebarNavigation";
 import { navigationLinks } from "@/features/navigation";
 import Link from "next/link";
 import { HiX } from "react-icons/hi";
