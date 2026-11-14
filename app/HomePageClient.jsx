@@ -6,8 +6,8 @@ import {
   ProjectsSection,
   SkillsSection,
   RoleBanner,
+  ContactSection,
 } from "@/features/home";
-import ContactSection from "./_components/ContactSection";
 import Cursor from "./_components/Cursor";
 
 function HomePageClient({ categories, projects, skills, profile }) {
