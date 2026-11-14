@@ -1,3 +1,5 @@
+"use client";
+
 import { useLoader } from "@/hooks/useLoader";
 
 const animationConfig = {
