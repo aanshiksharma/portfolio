@@ -1,14 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import { LuArrowUp, LuArrowUpRight } from "react-icons/lu";
-import { IconMap } from "./IconMap";
+import { IconMap } from "../ui/IconMap";
 
 import { useFooterAnimation } from "@/app/hooks/useFooterAnimation";
 
-function Footer({ profile }) {
+export function Footer({ profile }) {
   useFooterAnimation();
 
   const footerLinksClassName = `
@@ -87,5 +86,3 @@ function Footer({ profile }) {
     </footer>
   );
 }
-
-export default Footer;

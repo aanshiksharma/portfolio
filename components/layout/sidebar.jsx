@@ -1,11 +1,11 @@
 "use client";
 
 import { useSidebarNavigation } from "@/app/hooks/useSidebarNavigation";
-import navs from "./navlinks.data.json";
+import { navigationLinks } from "@/features/navigation";
 import Link from "next/link";
 import { HiX } from "react-icons/hi";
 
-function SidebarNav({ profile }) {
+export function Sidebar({ profile }) {
   const { closeSidebar } = useSidebarNavigation();
 
   return (
@@ -23,10 +23,10 @@ function SidebarNav({ profile }) {
 
         <nav>
           <ul className="text-xl font-medium text-secondary grid gap-1">
-            {navs.map((nav, index) => (
-              <li key={index}>
-                <Link href={nav.url} className="block p-3">
-                  {nav.label}
+            {navigationLinks.map((link) => (
+              <li key={link.id}>
+                <Link href={link.url} className="block p-3">
+                  {link.label}
                 </Link>
               </li>
             ))}
@@ -49,5 +49,3 @@ function SidebarNav({ profile }) {
     </div>
   );
 }
-
-export default SidebarNav;

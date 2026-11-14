@@ -1,9 +1,9 @@
 import { Bebas_Neue, Manrope, Poppins } from "next/font/google";
 import "./globals.css";
 
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import SidebarNav from "@/components/SidebarNav";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { Sidebar } from "@/components/layout/sidebar";
 
 import { faviconConfig } from "@/config/favicon";
 import { getProfile } from "@/lib/queries/profile";
@@ -97,8 +97,8 @@ export default async function RootLayout({ children }) {
       <body
         className={`${poppins.className} ${manrope.className} ${bebasNeue.variable} antialiased overflow-x-hidden`}
       >
-        <Navbar profile={profile} />
-        <SidebarNav profile={profile} />
+        <Header profile={profile} />
+        <Sidebar profile={profile} />
 
         <main>{children}</main>
 
