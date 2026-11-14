@@ -1,8 +1,12 @@
 "use client";
 
-import RoleBanner from "./_components/RoleBanner";
-import { ProjectsSection, AboutSection, HeroSection } from "@/features/home";
-import SkillsSection from "./_components/SkillsSection";
+import {
+  HeroSection,
+  AboutSection,
+  ProjectsSection,
+  SkillsSection,
+  RoleBanner,
+} from "@/features/home";
 import ContactSection from "./_components/ContactSection";
 import Cursor from "./_components/Cursor";
 

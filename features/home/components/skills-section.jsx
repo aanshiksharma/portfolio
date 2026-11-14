@@ -1,6 +1,6 @@
-import SkillsData from "./SkillsSection/SkillsData";
+import { SkillsData } from "@/features/home";
 
-function SkillsSection({ skills, categories }) {
+export function SkillsSection({ skills, categories }) {
   return (
     <section
       id="skills"
@@ -16,5 +16,3 @@ function SkillsSection({ skills, categories }) {
     </section>
   );
 }
-
-export default SkillsSection;

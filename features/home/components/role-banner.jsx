@@ -3,7 +3,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import gsap from "gsap";
 gsap.registerPlugin(ScrollTrigger);
 
-function RoleBanner() {
+export function RoleBanner() {
   useGSAP(() => {
     gsap.to(".move", {
       transform: "translateX(-200%)",
@@ -14,7 +14,7 @@ function RoleBanner() {
   }, []);
 
   return (
-    <div className="py-4 bg-surface text-secondary flex items-center shadow-xs shadow-dark-background/10 overflow-x-hidden pointer-events-none">
+    <div className="py-4 bg-surface text-secondary flex items-center shadow-xs shadow-dark-background/10 overflow-hidden pointer-events-none">
       {Array.from(new Array(5)).map((_, index) => (
         <p
           key={index}
@@ -26,5 +26,3 @@ function RoleBanner() {
     </div>
   );
 }
-
-export default RoleBanner;

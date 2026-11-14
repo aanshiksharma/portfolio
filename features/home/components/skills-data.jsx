@@ -8,7 +8,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function SkillsData({ skills, categories }) {
+export function SkillsData({ skills, categories }) {
   const blurBackgroundRef = useRef();
 
   useGSAP(() => {
@@ -95,5 +95,3 @@ function SkillsData({ skills, categories }) {
     </section>
   );
 }
-
-export default SkillsData;
