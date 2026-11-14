@@ -2,6 +2,12 @@ import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
 import { LuArrowUpRight } from "react-icons/lu";
 import { useProjectCardAnimation } from "@/features/projects";
+import { Project } from "@/types";
+
+type Props = {
+  project: Project;
+  rightToLeft: boolean;
+};
 
 const styles = {
   linksContainer:
@@ -23,7 +29,7 @@ const styles = {
   icons: "transition ease-out duration-300",
 };
 
-export function ProjectCard({ project, rightToLeft = false }) {
+export function ProjectCard({ project, rightToLeft = false }: Props) {
   useProjectCardAnimation();
 
   return (

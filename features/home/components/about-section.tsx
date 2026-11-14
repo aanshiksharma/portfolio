@@ -8,18 +8,21 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 import { AboutImage } from "@/features/home";
+import { Admin } from "@/types";
 
-export function AboutSection({ profile }) {
+type Props = { profile: Admin };
+
+export function AboutSection({ profile }: Props) {
   const styles = {
     paragraphContainer:
       "min-h-[35vh] py-[10vw] flex items-center md:text-2xl xl:text-[2vw] leading-relaxed",
   };
-  const aboutSectionRef = useRef();
+  const aboutSectionRef = useRef<HTMLElement>(null);
 
   useGSAP(
     () => {
       const context = gsap.context(() => {
-        gsap.utils.toArray(".description").forEach((element) => {
+        gsap.utils.toArray(".description").forEach((element: HTMLElement) => {
           gsap.from(element, {
             opacity: 0,
             yPercent: 100,

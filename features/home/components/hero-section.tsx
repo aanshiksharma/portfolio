@@ -10,8 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 import Image from "next/image";
 
 export function HeroSection() {
-  const descriptionRef = useRef();
-  const logoRef = useRef();
+  const descriptionRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLImageElement>(null);
 
   useGSAP(() => {
     gsap.from(descriptionRef.current, {
