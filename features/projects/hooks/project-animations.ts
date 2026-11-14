@@ -42,8 +42,8 @@ export const useProjectCardAnimation = () => {
       createAnimations("top 60%");
     });
 
-    function createAnimations(start) {
-      const projectCards = gsap.utils.toArray(".projectCard");
+    function createAnimations(start: string) {
+      const projectCards = gsap.utils.toArray<HTMLElement>(".projectCard");
 
       projectCards.map((project) => {
         const timeline = gsap.timeline({

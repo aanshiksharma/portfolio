@@ -9,7 +9,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export function SkillsData({ skills, categories }) {
-  const blurBackgroundRef = useRef();
+  const blurBackgroundRef = useRef<HTMLElement>(null);
 
   useGSAP(() => {
     const fromLeft = gsap.utils.toArray(".from-left");

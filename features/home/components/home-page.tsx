@@ -8,8 +8,18 @@ import {
   RoleBanner,
   ContactSection,
 } from "@/features/home";
+import { Admin, Skill, Category, Project } from "@/types";
 
-export function HomePage({ data }) {
+type Props = {
+  data: {
+    projects: Project[];
+    skills: Skill[];
+    categories: Category[];
+    profile: Admin;
+  };
+};
+
+export function HomePage({ data }: Props) {
   return (
     <main>
       <HeroSection />

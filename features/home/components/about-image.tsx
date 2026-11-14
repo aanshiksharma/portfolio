@@ -10,10 +10,10 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export function AboutImage() {
-  const mainContainerRef = useRef();
-  const imageRef = useRef();
-  const bannerRef = useRef();
-  const socialLinksRef = useRef();
+  const mainContainerRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
+  const bannerRef = useRef<HTMLDivElement>(null);
+  const socialLinksRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     gsap.from(mainContainerRef.current, {

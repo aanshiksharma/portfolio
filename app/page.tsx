@@ -4,11 +4,17 @@ import { getCategories } from "@/lib/queries/categories";
 import { getProfile } from "@/lib/queries/profile";
 
 import { HomePage } from "@/features/home";
+import { Category, Project, Skill, Admin } from "@/types";
 
 export const revalidate = 120;
 
 export default async function Home() {
-  const [projects, skills, categories, profile] = await Promise.all([
+  const [projects, skills, categories, profile]: [
+    Project[],
+    Skill[],
+    Category[],
+    Admin,
+  ] = await Promise.all([
     getProjects(),
     getSkills(),
     getCategories(),

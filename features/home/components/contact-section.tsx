@@ -28,7 +28,7 @@ export function ContactSection({ profile }) {
             text-xl min-[28rem]:text-3xl lg:text-4xl xl:text-6xl
           `}
         >
-          <h2 className="text-animation text-[1.2em]">Let's Connect</h2>
+          <h2 className="text-animation text-[1.2em]">Let&apos;s Connect</h2>
 
           <a
             href={`mailto:${profile.email}`}
