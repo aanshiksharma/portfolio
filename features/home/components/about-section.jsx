@@ -7,7 +7,7 @@ import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-import { AboutImage } from "@/features/about";
+import { AboutImage } from "@/features/home";
 
 export function AboutSection({ profile }) {
   const styles = {

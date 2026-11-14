@@ -2,9 +2,8 @@
 
 import HeroSection from "./_components/HeroSection";
 import RoleBanner from "./_components/RoleBanner";
-import ProjectsSection from "./_components/ProjectsSection";
+import { ProjectsSection, AboutSection } from "@/features/home";
 import SkillsSection from "./_components/SkillsSection";
-import { AboutSection } from "@/features/about";
 import ContactSection from "./_components/ContactSection";
 import Cursor from "./_components/Cursor";
 
