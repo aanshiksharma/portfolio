@@ -1,3 +1,5 @@
+export { HeroSection } from "./components/hero-section";
+
 export { AboutImage } from "./components/about-image";
 export { AboutSection } from "./components/about-section";
 

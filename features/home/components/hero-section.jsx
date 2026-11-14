@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 import Image from "next/image";
 
-function HeroSection() {
+export function HeroSection() {
   const descriptionRef = useRef();
   const logoRef = useRef();
 
@@ -97,5 +97,3 @@ function HeroSection() {
     </section>
   );
 }
-
-export default HeroSection;
