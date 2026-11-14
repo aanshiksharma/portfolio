@@ -1,6 +1,6 @@
 "use client";
 
-import Loader from "@/components/ui/loader";
+import { Loader } from "@/components/ui/loader";
 import Image from "next/image";
 
 function Loading() {
