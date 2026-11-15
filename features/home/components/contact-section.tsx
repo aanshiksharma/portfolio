@@ -4,8 +4,11 @@ import Image from "next/image";
 
 import { useContactAnimation } from "@/features/home";
 import { LuArrowUpRight } from "react-icons/lu";
+import { Admin } from "@/types";
 
-export function ContactSection({ profile }) {
+type Props = { profile: Admin };
+
+export function ContactSection({ profile }: Props) {
   useContactAnimation();
 
   return (

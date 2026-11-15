@@ -6,8 +6,11 @@ import { LuArrowUp, LuArrowUpRight } from "react-icons/lu";
 import { IconMap } from "@/components/ui/icon-map";
 
 import { useFooterAnimation } from "@/hooks/useFooterAnimation";
+import { Admin } from "@/types";
 
-export function Footer({ profile }) {
+type Props = { profile: Admin };
+
+export function Footer({ profile }: Props) {
   useFooterAnimation();
 
   const footerLinksClassName = `
@@ -38,7 +41,7 @@ export function Footer({ profile }) {
                   {
                     IconMap.find(
                       (item) => item.name === link.platform.toLowerCase(),
-                    ).icon
+                    )!.icon
                   }
                 </a>
               </li>
@@ -51,7 +54,7 @@ export function Footer({ profile }) {
                 className={footerLinksClassName}
               >
                 <span>Email</span>
-                {IconMap.find((item) => item.name === "email").icon}
+                {IconMap.find((item) => item.name === "email")!.icon}
               </a>
             </li>
           </ul>

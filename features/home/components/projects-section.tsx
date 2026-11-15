@@ -1,6 +1,9 @@
 import { useHeadingAnimation, ProjectCard } from "@/features/projects";
+import { Project } from "@/types";
 
-export function ProjectsSection({ projects }) {
+type Props = { projects: Project[] };
+
+export function ProjectsSection({ projects }: Props) {
   useHeadingAnimation();
 
   return (

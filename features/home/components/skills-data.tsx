@@ -5,10 +5,13 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { Category, Skill } from "@/types";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export function SkillsData({ skills, categories }) {
+type Props = { skills: Skill[]; categories: Category[] };
+
+export function SkillsData({ skills, categories }: Props) {
   const blurBackgroundRef = useRef<HTMLElement>(null);
 
   useGSAP(() => {

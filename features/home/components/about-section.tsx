@@ -22,7 +22,7 @@ export function AboutSection({ profile }: Props) {
   useGSAP(
     () => {
       const context = gsap.context(() => {
-        gsap.utils.toArray(".description").forEach((element: HTMLElement) => {
+        gsap.utils.toArray<HTMLElement>(".description").forEach((element) => {
           gsap.from(element, {
             opacity: 0,
             yPercent: 100,

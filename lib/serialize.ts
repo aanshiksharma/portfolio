@@ -1,3 +1,3 @@
-export function serialize(data) {
+export function serialize(data: any) {
   return JSON.parse(JSON.stringify(data));
 }

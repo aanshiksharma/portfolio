@@ -4,8 +4,11 @@ import { useSidebarNavigation } from "@/hooks/useSidebarNavigation";
 import { navigationLinks } from "@/features/navigation";
 import Link from "next/link";
 import { HiX } from "react-icons/hi";
+import { Admin } from "@/types";
 
-export function Sidebar({ profile }) {
+type Props = { profile: Admin };
+
+export function Sidebar({ profile }: Props) {
   const { closeSidebar } = useSidebarNavigation();
 
   return (
@@ -35,7 +38,7 @@ export function Sidebar({ profile }) {
 
         <hr className="my-2 border-muted/50" />
 
-        <Link
+        <a
           href={profile.resumeLink}
           target="_blank"
           className={`
@@ -44,7 +47,7 @@ export function Sidebar({ profile }) {
           `}
         >
           Resume
-        </Link>
+        </a>
       </div>
     </div>
   );

@@ -13,8 +13,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 import { useSidebarNavigation } from "@/hooks/useSidebarNavigation";
 import { navigationLinks } from "@/features/navigation";
+import { Admin } from "@/types";
 
-export function Header({ profile }) {
+type Props = { profile: Admin };
+
+export function Header({ profile }: Props) {
   const headerRef = useRef(null);
   const prevScrollRef = useRef(0);
   const [top, setTop] = useState(true);
@@ -30,7 +33,7 @@ export function Header({ profile }) {
   }, []);
 
   useEffect(() => {
-    const toggleHeader = (hide) => {
+    const toggleHeader = (hide: boolean) => {
       if (hide) {
         gsap.to("header", {
           yPercent: -100,
@@ -109,7 +112,7 @@ export function Header({ profile }) {
             </ul>
           </nav>
 
-          <Link
+          <a
             href={profile.resumeLink}
             target="_blank"
             className={`
@@ -126,7 +129,7 @@ export function Header({ profile }) {
               size={24}
               className="group-hover:rotate-45 group-hover:translate-x-2 transition ease-out duration-300"
             />
-          </Link>
+          </a>
         </div>
 
         <button

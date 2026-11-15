@@ -1,13 +1,14 @@
+import { ReactNode } from "react";
 import { Bebas_Neue, Manrope, Poppins } from "next/font/google";
 import "./globals.css";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Sidebar } from "@/components/layout/sidebar";
+import { Cursor } from "@/components/ui/cursor";
 
 import { faviconConfig } from "@/config/favicon";
 import { getProfile } from "@/lib/queries/profile";
-import { Cursor } from "@/components/ui/cursor";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -90,7 +91,11 @@ export const metadata = {
 
 export const revalidate = 120;
 
-export default async function RootLayout({ children }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   const profile = await getProfile();
 
   return (
