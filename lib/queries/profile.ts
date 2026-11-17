@@ -1,11 +1,14 @@
 import Admin from "@/models/Admin";
 import { connectDB } from "../mongodb";
-import { serialize } from "../serialize";
+import { toPublicProfile } from "../mappers/profile.mapper";
+import type { AdminDocument, PublicProfile } from "@/types";
 
-export const getProfile = async () => {
+export const getProfile = async (): Promise<PublicProfile | null> => {
   await connectDB();
 
-  const admin = await Admin.findOne().select("-password").lean();
+  const admin = await Admin.findOne().select("-password").lean<AdminDocument>();
 
-  return serialize(admin);
+  if (!admin) return null;
+
+  return toPublicProfile(admin);
 };

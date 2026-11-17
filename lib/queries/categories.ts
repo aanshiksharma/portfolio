@@ -1,11 +1,12 @@
 import Category from "@/models/Category";
 import { connectDB } from "../mongodb";
-import { serialize } from "../serialize";
+import { CategoryDetail, CategoryDocument } from "@/types";
+import { toCategoryDetail } from "../mappers/category.mapper";
 
-export const getCategories = async () => {
+export const getCategories = async (): Promise<CategoryDetail[]> => {
   await connectDB();
 
-  const category = await Category.find().lean();
+  const categories = await Category.find().lean<CategoryDocument[]>();
 
-  return serialize(category);
+  return categories.map(toCategoryDetail);
 };

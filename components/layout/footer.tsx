@@ -6,9 +6,9 @@ import { LuArrowUp, LuArrowUpRight } from "react-icons/lu";
 import { IconMap } from "@/components/ui/icon-map";
 
 import { useFooterAnimation } from "@/hooks/useFooterAnimation";
-import { Admin } from "@/types";
+import { PublicProfile } from "@/types";
 
-type Props = { profile: Admin };
+type Props = { profile: PublicProfile };
 
 export function Footer({ profile }: Props) {
   useFooterAnimation();

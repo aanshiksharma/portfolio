@@ -9,6 +9,7 @@ import { Cursor } from "@/components/ui/cursor";
 
 import { faviconConfig } from "@/config/favicon";
 import { getProfile } from "@/lib/queries/profile";
+import { PublicProfile } from "@/types";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -96,7 +97,9 @@ export default async function RootLayout({
 }: {
   children: ReactNode;
 }) {
-  const profile = await getProfile();
+  const profile: PublicProfile | null = await getProfile();
+
+  if (!profile) throw new Error("Public profile not found");
 
   return (
     <html lang="en">

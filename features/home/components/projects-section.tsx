@@ -1,56 +1,44 @@
 import { useHeadingAnimation, ProjectCard } from "@/features/projects";
-import { Project } from "@/types";
+import { ProjectSummary } from "@/types";
+import Link from "next/link";
 
-type Props = { projects: Project[] };
+type Props = { projects: ProjectSummary[] };
 
 export function ProjectsSection({ projects }: Props) {
-  useHeadingAnimation();
+  // useHeadingAnimation();
 
   return (
-    <section id="projects">
-      <div className="sticky -top-1/8 md:-top-1/4 h-[60vh] md:h-screen flex items-center justify-center bg-background overflow-hidden">
-        <h2 className="text-[25vw] md:text-[15vw] text-center leading-none tracking-tight uppercase flex max-md:flex-col items-center md:gap-8">
-          <span className="fromLeft relative font-display">Featured</span>
-          <span className="fromRight relative font-display">Projects</span>
-        </h2>
-      </div>
+    <section
+      id="projects"
+      className="bg-dark-background text-dark-foreground flex flex-col gap-18 py-18 px-4 lg:px-6"
+    >
+      <h2 className="text-6xl font-display">Selected Work</h2>
 
-      <section
+      <div
         id="projectsList"
-        className="relative z-1 flex flex-col bg-dark-background px-4 lg:px-12 max-lg:py-20 max-lg:gap-20 overflow-hidden"
+        className="relative z-1 grid lg:grid-cols-2 items-end content-end gap-x-6 gap-y-18 lg:gap-y-50 overflow-hidden"
       >
-        {projects.length > 0 ? (
-          projects
-            .filter((project) => project.featured)
-            .map((project, index) => (
+        {projects
+          .filter((project) => project.featured)
+          .map((project, index) => (
+            <div
+              className={`flex w-full ${(index + 1) % 3 === 0 ? "lg:col-span-2 lg:justify-center" : "lg:justify-end"}`}
+            >
               <ProjectCard
                 key={index}
                 project={project}
-                rightToLeft={index % 2 !== 0}
+                className={`flex-1 ${(index + 1) % 2 === 0 ? "lg:translate-y-10 lg:max-w-2/3" : ""} ${(index + 1) % 3 === 0 ? "lg:max-w-1/2" : ""}`}
               />
-            ))
-        ) : (
-          <div className="min-h-[30vh] flex flex-col gap-6 items-center justify-center text-dark-foreground px-4">
-            <h2 className="text-2xl">No projects found.</h2>
-            <div className="space-y-2 text-center">
-              <p>
-                Go to{" "}
-                <a
-                  target="_blank"
-                  href="https://portfolio-manager-cms.vercel.app"
-                  className="hover:underline hover:text-primary transition ease-out duration-300"
-                >
-                  Portfolio CMS
-                </a>{" "}
-                to add a project.
-              </p>
-              <p className="text-dark-muted">
-                This could also be due to an error in the backend.
-              </p>
             </div>
-          </div>
-        )}
-      </section>
+          ))}
+      </div>
+
+      <Link
+        href={"/work"}
+        className="bg-background text-foreground px-9 py-3 w-fit self-center rounded-2xl"
+      >
+        Explore all works {"->"}
+      </Link>
     </section>
   );
 }

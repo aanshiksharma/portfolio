@@ -1,11 +1,12 @@
 import Project from "@/models/Project";
 import { connectDB } from "../mongodb";
-import { serialize } from "../serialize";
+import { toProjectSummary } from "../mappers/project.mapper";
+import type { ProjectDocument, ProjectSummary } from "@/types";
 
-export const getProjects = async () => {
+export const getProjects = async (): Promise<ProjectSummary[]> => {
   await connectDB();
 
-  const project = await Project.find().lean();
+  const projects = await Project.find().lean<ProjectDocument[]>();
 
-  return serialize(project);
+  return projects.map(toProjectSummary);
 };

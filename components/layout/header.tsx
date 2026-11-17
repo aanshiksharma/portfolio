@@ -13,9 +13,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 import { useSidebarNavigation } from "@/hooks/useSidebarNavigation";
 import { navigationLinks } from "@/features/navigation";
-import { Admin } from "@/types";
+import { PublicProfile } from "@/types";
 
-type Props = { profile: Admin };
+type Props = { profile: PublicProfile };
 
 export function Header({ profile }: Props) {
   const headerRef = useRef(null);

@@ -1,11 +1,12 @@
 import Skill from "@/models/Skill";
 import { connectDB } from "../mongodb";
-import { serialize } from "../serialize";
+import type { SkillDetail, SkillDocument } from "@/types";
+import { toSkillDetail } from "../mappers/skill.mapper";
 
-export const getSkills = async () => {
+export const getSkills = async (): Promise<SkillDetail[]> => {
   await connectDB();
 
-  const skill = await Skill.find().lean();
+  const skills = await Skill.find().lean<SkillDocument[]>();
 
-  return serialize(skill);
+  return skills.map(toSkillDetail);
 };

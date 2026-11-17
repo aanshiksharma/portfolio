@@ -5,11 +5,11 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { Category, Skill } from "@/types";
+import { CategoryDetail, SkillDetail } from "@/types";
 
 gsap.registerPlugin(ScrollTrigger);
 
-type Props = { skills: Skill[]; categories: Category[] };
+type Props = { skills: SkillDetail[]; categories: CategoryDetail[] };
 
 export function SkillsData({ skills, categories }: Props) {
   const blurBackgroundRef = useRef<HTMLElement>(null);
@@ -74,7 +74,7 @@ export function SkillsData({ skills, categories }: Props) {
     >
       {categories.map((category, index) => (
         <div
-          key={category._id}
+          key={category.id}
           className={`basis-sm max-w-md flex-1 flex flex-col gap-4 max-md:text-xs
                 ${index % 2 === 0 ? "from-left" : "from-right"}
             `}
@@ -83,10 +83,10 @@ export function SkillsData({ skills, categories }: Props) {
 
           <ul className="flex flex-wrap items-center gap-2 md:gap-3">
             {skills
-              .filter((skill) => skill.category === category._id)
+              .filter((skill) => skill.category === category.id)
               .map((skill) => (
                 <li
-                  key={skill._id}
+                  key={skill.id}
                   className="bg-accent/30 hover:bg-accent/60 backdrop-blur-2xl px-2 md:px-3 py-0.5 rounded-[0.55em] text-dark-secondary hover:text-dark-foreground transition duration-300 ease-out cursor-default"
                 >
                   {skill.name}

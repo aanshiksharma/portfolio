@@ -8,14 +8,19 @@ import {
   RoleBanner,
   ContactSection,
 } from "@/features/home";
-import { Admin, Skill, Category, Project } from "@/types";
+import {
+  PublicProfile,
+  SkillDetail,
+  CategoryDetail,
+  ProjectSummary,
+} from "@/types";
 
 type Props = {
   data: {
-    projects: Project[];
-    skills: Skill[];
-    categories: Category[];
-    profile: Admin;
+    projects: ProjectSummary[];
+    skills: SkillDetail[];
+    categories: CategoryDetail[];
+    profile: PublicProfile;
   };
 };
 

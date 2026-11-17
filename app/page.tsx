@@ -4,22 +4,29 @@ import { getCategories } from "@/lib/queries/categories";
 import { getProfile } from "@/lib/queries/profile";
 
 import { HomePage } from "@/features/home";
-import { Category, Project, Skill, Admin } from "@/types";
+import {
+  ProjectSummary,
+  SkillDetail,
+  CategoryDetail,
+  PublicProfile,
+} from "@/types";
 
 export const revalidate = 120;
 
 export default async function Home() {
   const [projects, skills, categories, profile]: [
-    Project[],
-    Skill[],
-    Category[],
-    Admin,
+    ProjectSummary[],
+    SkillDetail[],
+    CategoryDetail[],
+    PublicProfile | null,
   ] = await Promise.all([
     getProjects(),
     getSkills(),
     getCategories(),
     getProfile(),
   ]);
+
+  if (!profile) throw new Error("Public profile could not be loaded.");
 
   return <HomePage data={{ projects, skills, categories, profile }} />;
 }

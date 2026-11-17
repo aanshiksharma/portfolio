@@ -1,7 +1,7 @@
 import { SkillsData } from "@/features/home";
-import { Skill, Category } from "@/types";
+import { SkillDetail, CategoryDetail } from "@/types";
 
-type Props = { skills: Skill[]; categories: Category[] };
+type Props = { skills: SkillDetail[]; categories: CategoryDetail[] };
 
 export function SkillsSection({ skills, categories }: Props) {
   return (

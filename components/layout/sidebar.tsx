@@ -4,9 +4,9 @@ import { useSidebarNavigation } from "@/hooks/useSidebarNavigation";
 import { navigationLinks } from "@/features/navigation";
 import Link from "next/link";
 import { HiX } from "react-icons/hi";
-import { Admin } from "@/types";
+import { PublicProfile } from "@/types";
 
-type Props = { profile: Admin };
+type Props = { profile: PublicProfile };
 
 export function Sidebar({ profile }: Props) {
   const { closeSidebar } = useSidebarNavigation();

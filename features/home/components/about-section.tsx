@@ -8,9 +8,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 import { AboutImage } from "@/features/home";
-import { Admin } from "@/types";
+import { PublicProfile } from "@/types";
 
-type Props = { profile: Admin };
+type Props = { profile: PublicProfile };
 
 export function AboutSection({ profile }: Props) {
   const styles = {
