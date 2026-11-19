@@ -1,7 +1,4 @@
 import Image from "next/image";
-import { BsGithub } from "react-icons/bs";
-import { LuArrowUpRight } from "react-icons/lu";
-import { useProjectCardAnimation } from "@/features/projects";
 import { ProjectSummary } from "@/types";
 
 type Props = {
@@ -10,8 +7,6 @@ type Props = {
 };
 
 export function ProjectCard({ project, className }: Props) {
-  // useProjectCardAnimation();
-
   return (
     <div
       className={`
