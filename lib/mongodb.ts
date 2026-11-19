@@ -6,16 +6,30 @@ if (!MONGODB_URI) {
   throw new Error("MONGODB_URI missing");
 }
 
-const cached = global.mongoose ?? {
+const cached = (global.mongoose ??= {
   conn: null,
   promise: null,
-};
+});
 
 export const connectDB = async () => {
   if (cached.conn) return cached.conn;
-  if (!cached.promise) cached.promise = mongoose.connect(MONGODB_URI);
 
-  cached.conn = await cached.promise;
+  const connectionPromise =
+    cached.promise ??
+    (cached.promise = mongoose.connect(MONGODB_URI, {
+      maxPoolSize: 10,
+      minPoolSize: 0,
+      maxConnecting: 2,
+    }));
 
-  return cached.conn;
+  try {
+    const connection = await connectionPromise;
+    cached.conn = connection;
+
+    return connection;
+  } catch (error) {
+    if (cached.promise === connectionPromise) cached.promise = null;
+
+    throw error;
+  }
 };
