@@ -1,6 +1,6 @@
+import Link from "next/link";
 import { ProjectCard } from "@/features/projects";
 import { ProjectSummary } from "@/types";
-import Link from "next/link";
 
 type Props = { projects: ProjectSummary[] };
 
@@ -20,10 +20,10 @@ export function ProjectsSection({ projects }: Props) {
           .filter((project) => project.featured)
           .map((project, index) => (
             <div
+              key={project.id}
               className={`flex w-full ${(index + 1) % 3 === 0 ? "lg:col-span-2 lg:justify-center" : "lg:justify-end"}`}
             >
               <ProjectCard
-                key={project.id}
                 project={project}
                 className={`flex-1 ${(index + 1) % 2 === 0 ? "lg:translate-y-10 lg:max-w-2/3" : ""} ${(index + 1) % 3 === 0 ? "lg:max-w-1/2" : ""}`}
               />

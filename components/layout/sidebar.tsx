@@ -1,9 +1,10 @@
 "use client";
 
-import { useSidebarNavigation } from "@/hooks/useSidebarNavigation";
-import { navigationLinks } from "@/features/navigation";
 import Link from "next/link";
 import { HiX } from "react-icons/hi";
+
+import { useSidebarNavigation } from "@/hooks/useSidebarNavigation";
+import { navigationLinks } from "@/features/navigation";
 import { PublicProfile } from "@/types";
 
 type Props = { profile: PublicProfile };
