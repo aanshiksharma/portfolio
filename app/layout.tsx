@@ -10,6 +10,7 @@ import { Cursor } from "@/components/ui/cursor";
 import { faviconConfig } from "@/config/favicon";
 import { getProfile } from "@/lib/queries/profile";
 import { PublicProfile } from "@/types";
+import { SmoothScroll } from "@/components/layout/smooth-scroll";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -106,6 +107,7 @@ export default async function RootLayout({
       <body
         className={`${poppins.className} ${manrope.className} ${bebasNeue.variable} antialiased overflow-x-hidden`}
       >
+        <SmoothScroll />
         <Cursor />
         <Header profile={profile} />
         <Sidebar profile={profile} />

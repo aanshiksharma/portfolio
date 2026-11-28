@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from "react";
 import Image from "next/image";
+import { useRef } from "react";
 import { BsInstagram, BsLinkedin, BsGithub } from "react-icons/bs";
 
 import gsap from "gsap";
@@ -24,18 +24,6 @@ export function AboutImage() {
         scroller: "body",
         start: "top 85%",
         end: "+=20%",
-        scrub: 3,
-      },
-    });
-
-    gsap.to(imageRef.current, {
-      yPercent: -30,
-      scrollTrigger: {
-        trigger: imageRef.current,
-        scroller: "body",
-        start: "top 20%",
-        end: "+=50%",
-        scrub: 3,
       },
     });
 
@@ -64,15 +52,17 @@ export function AboutImage() {
   return (
     <div
       ref={mainContainerRef}
-      className="rounded-3xl h-32 sm:h-64 md:h-96 min-[100rem]:h-160 relative overflow-hidden"
+      className="rounded-3xl h-32 sm:h-64 md:h-[70svh] relative overflow-hidden"
     >
       <Image
         ref={imageRef}
+        data-scroll
+        data-scroll-speed={-0.15}
         src="/about-image.jpg"
         width={500}
         height={200}
         alt="aanshik's image"
-        className="w-full h-auto md:h-[150%] object-cover object-top transition ease-out duration-1000"
+        className="relative w-full h-auto md:h-[150%] object-cover"
       />
 
       <div
